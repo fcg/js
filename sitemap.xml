@@ -114,18 +114,6 @@
     
         
     <url>
-     <loc>http://js.flyabroad.com.hk/au/points-test/</loc>
-     <lastmod>2018-03-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://js.flyabroad.com.hk/au/ceiling/</loc>
-     <lastmod>2018-03-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>http://js.flyabroad.com.hk/au/combined/</loc>
      <lastmod>2018-03-27</lastmod>
      <changefreq>daily</changefreq>
@@ -139,6 +127,12 @@
         
     <url>
      <loc>http://js.flyabroad.com.hk/au/stsol/</loc>
+     <lastmod>2018-03-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://js.flyabroad.com.hk/au/rol/</loc>
      <lastmod>2018-03-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -205,6 +199,18 @@
         
     <url>
      <loc>http://js.flyabroad.com.hk/au/wa/</loc>
+     <lastmod>2018-03-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://js.flyabroad.com.hk/au/points-test/</loc>
+     <lastmod>2018-03-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://js.flyabroad.com.hk/au/ceiling/</loc>
      <lastmod>2018-03-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
