@@ -10,24 +10,20 @@
         <link rel="shortcut icon" href="../../favicon.ico">
         
         <title>STSOL 短期职业列表（20191115） - 飞出国技术移民</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../css/highlight.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-63569270-3', 'auto');
             ga('send', 'pageview');
@@ -35,423 +31,437 @@
     </head>
 
     <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">飞出国技术移民</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">首页 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../.." class="dropdown-item">飞出国技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/" class="dropdown-item">加拿大移民</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">澳洲移民</a>
+</li>
+                                    
+<li>
+    <a href="../../nz/" class="dropdown-item">新西兰移民</a>
+</li>
+                                    
+<li>
+    <a href="../../am/" class="dropdown-item">美国移民</a>
+</li>
+                                    
+<li>
+    <a href="../../qt/" class="dropdown-item">其他移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/" class="dropdown-item">澳洲职业评估</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">加拿大移民 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../ca/ee/" class="dropdown-item">Express Entry 联邦快速通道</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/qc/" class="dropdown-item">CSQ 魁北克技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/ab/" class="dropdown-item">AINP 阿省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/bc/" class="dropdown-item">BCPNP 卑诗省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/mb/" class="dropdown-item">MPNP 曼省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/nb/" class="dropdown-item">NBPNP NB省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/nl/" class="dropdown-item">NLPNP 纽芬兰省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/ns/" class="dropdown-item">NSNP 新省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/on/" class="dropdown-item">OINP 安省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/pei/" class="dropdown-item">PEPNP 爱德华王子岛省提名技术</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/sk/" class="dropdown-item">SINP 萨省省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/yk/" class="dropdown-item">YKPNP 育空省提名技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/aipp/" class="dropdown-item">AIPP大西洋移民试点项目</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/caregivers/" class="dropdown-item">加拿大联邦护理移民项目</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/fse/" class="dropdown-item">加拿大联邦自雇移民</a>
+</li>
+                                    
+<li>
+    <a href="../../ca/af/" class="dropdown-item">加拿大联邦农业食品移民</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">澳洲移民 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../combined/" class="dropdown-item">Combined List 合并技术职业列表（20191115）</a>
+</li>
+                                    
+<li>
+    <a href="../mltssl/" class="dropdown-item">MLTSSL 中长期职业列表（20191115）</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">STSOL 短期职业列表（20191115）</a>
+</li>
+                                    
+<li>
+    <a href="../points-test/" class="dropdown-item">Points test 评分标准</a>
+</li>
+                                    
+<li>
+    <a href="../rol/" class="dropdown-item">ROL 偏远地区担保职业列表（20191115）</a>
+</li>
+                                    
+<li>
+    <a href="../189/" class="dropdown-item">189 独立技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../190/" class="dropdown-item">190 州担保技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../491/" class="dropdown-item">491 偏远地区担保临时签证</a>
+</li>
+                                    
+<li>
+    <a href="../494/" class="dropdown-item">494 偏远地区雇主担保临时签证</a>
+</li>
+                                    
+<li>
+    <a href="../186/" class="dropdown-item">186 雇主担保移民</a>
+</li>
+                                    
+<li>
+    <a href="../act/" class="dropdown-item">ACT 堪培拉担保</a>
+</li>
+                                    
+<li>
+    <a href="../nsw/" class="dropdown-item">NSW 新州担保</a>
+</li>
+                                    
+<li>
+    <a href="../nt/" class="dropdown-item">NT 北领地担保</a>
+</li>
+                                    
+<li>
+    <a href="../qld/" class="dropdown-item">QLD 昆州担保</a>
+</li>
+                                    
+<li>
+    <a href="../sa/" class="dropdown-item">SA 南澳担保</a>
+</li>
+                                    
+<li>
+    <a href="../tas/" class="dropdown-item">TAS 塔州担保</a>
+</li>
+                                    
+<li>
+    <a href="../vic/" class="dropdown-item">VIC 维州担保</a>
+</li>
+                                    
+<li>
+    <a href="../wa/" class="dropdown-item">WA 西澳担保</a>
+</li>
+                                    
+<li>
+    <a href="../GTI/" class="dropdown-item">GTI全球人才计划</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">新西兰移民 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../nz/smc/" class="dropdown-item">新西兰技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../nz/nz-joboffer/" class="dropdown-item">新西兰雇主担保移民</a>
+</li>
+                                    
+<li>
+    <a href="../../nz/nz-graduate/" class="dropdown-item">新西兰留学移民</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">美国移民 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../am/eb1a/" class="dropdown-item">美国EB-1A杰出人才移民</a>
+</li>
+                                    
+<li>
+    <a href="../../am/niw/" class="dropdown-item">美国NIW国家利益豁免移民</a>
+</li>
+                                    
+<li>
+    <a href="../../am/eb3/" class="dropdown-item">美国EB-3职业移民</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">其他移民 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../qt/km/" class="dropdown-item">荷兰KM高技术移民</a>
+</li>
+                                    
+<li>
+    <a href="../../qt/ger/" class="dropdown-item">德国蓝卡移民</a>
+</li>
+                                    
+<li>
+    <a href="../../qt/sgjoboffer/" class="dropdown-item">新加坡雇主担保移民</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">澳洲职业评估 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../ass/aaca/" class="dropdown-item">AACA 建筑师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/acs/" class="dropdown-item">ACS 计算机评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/aim/" class="dropdown-item">AIM 经理类评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/aiqs/" class="dropdown-item">AIQS 工料测量师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/cpaa/" class="dropdown-item">CPAA 会计职业评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/ea/" class="dropdown-item">EA 工程师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/tra/" class="dropdown-item">TRA 技工评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/vet/" class="dropdown-item">VETASSESS 职业评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/aasw/" class="dropdown-item">AASW 社工评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/acpsem/" class="dropdown-item">ACPSEM 医学物理学家评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/acwa/" class="dropdown-item">ACWA 社区工作者评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/adc/" class="dropdown-item">ADC 牙医评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/aims/" class="dropdown-item">AIMS 医学家评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/air/" class="dropdown-item">AIR 放射医生评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/aitsl/" class="dropdown-item">AITSL 教师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/anmac/" class="dropdown-item">ANMAC 护士和助产士评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/anzoc/" class="dropdown-item">ANZOC 整骨师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/anzsnm/" class="dropdown-item">ANZSNM 核医学技师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/apc/" class="dropdown-item">APC 物理治疗师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/apharmc/" class="dropdown-item">APharmC 药剂师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/apodc/" class="dropdown-item">APodC 脚医评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/aps/" class="dropdown-item">APS 心理学家评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/avbc/" class="dropdown-item">AVBC 兽医评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/ccea/" class="dropdown-item">CCEA 按摩师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/daa/" class="dropdown-item">DAA 营养学家评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/icaa/" class="dropdown-item">ICAA 会计师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/ipa/" class="dropdown-item">IPA 会计师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/mba/" class="dropdown-item">MBA 医生评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/naati/" class="dropdown-item">NAATI 翻译评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/ocanz/" class="dropdown-item">OCANZ 验光师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/otc/" class="dropdown-item">OTC 职业治疗师评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/spa/" class="dropdown-item">SPA 语言病理学家评估</a>
+</li>
+                                    
+<li>
+    <a href="../../ass/sssi/" class="dropdown-item">SSSI 测量师评估</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
 
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../..">飞出国技术移民</a>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../mltssl/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../points-test/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">首页 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../..">飞出国技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/">加拿大移民</a>
-</li>
-                            
-<li >
-    <a href="../">澳洲移民</a>
-</li>
-                            
-<li >
-    <a href="../../nz/">新西兰移民</a>
-</li>
-                            
-<li >
-    <a href="../../am/">美国移民</a>
-</li>
-                            
-<li >
-    <a href="../../qt/">其他移民</a>
-</li>
-                            
-<li >
-    <a href="../../ass/">澳洲职业评估</a>
-</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">加拿大移民 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../../ca/ee/">Express Entry 联邦快速通道</a>
-</li>
-                            
-<li >
-    <a href="../../ca/qc/">CSQ 魁北克技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/ab/">AINP 阿省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/bc/">BCPNP 卑诗省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/mb/">MPNP 曼省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/nb/">NBPNP NB省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/nl/">NLPNP 纽芬兰省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/ns/">NSNP 新省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/on/">OINP 安省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/pei/">PEPNP 爱德华王子岛省提名技术</a>
-</li>
-                            
-<li >
-    <a href="../../ca/sk/">SINP 萨省省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/yk/">YKPNP 育空省提名技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/aipp/">AIPP大西洋移民试点项目</a>
-</li>
-                            
-<li >
-    <a href="../../ca/caregivers/">加拿大联邦护理移民项目</a>
-</li>
-                            
-<li >
-    <a href="../../ca/fse/">加拿大联邦自雇移民</a>
-</li>
-                            
-<li >
-    <a href="../../ca/af/">加拿大联邦农业食品移民</a>
-</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">澳洲移民 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../combined/">Combined List 合并技术职业列表（20191115）</a>
-</li>
-                            
-<li >
-    <a href="../mltssl/">MLTSSL 中长期职业列表（20191115）</a>
-</li>
-                            
-<li class="active">
-    <a href="./">STSOL 短期职业列表（20191115）</a>
-</li>
-                            
-<li >
-    <a href="../points-test/">Points test 评分标准</a>
-</li>
-                            
-<li >
-    <a href="../rol/">ROL 偏远地区担保职业列表（20191115）</a>
-</li>
-                            
-<li >
-    <a href="../189/">189 独立技术移民</a>
-</li>
-                            
-<li >
-    <a href="../190/">190 州担保技术移民</a>
-</li>
-                            
-<li >
-    <a href="../491/">491 偏远地区担保临时签证</a>
-</li>
-                            
-<li >
-    <a href="../494/">494 偏远地区雇主担保临时签证</a>
-</li>
-                            
-<li >
-    <a href="../186/">186 雇主担保移民</a>
-</li>
-                            
-<li >
-    <a href="../act/">ACT 堪培拉担保</a>
-</li>
-                            
-<li >
-    <a href="../nsw/">NSW 新州担保</a>
-</li>
-                            
-<li >
-    <a href="../nt/">NT 北领地担保</a>
-</li>
-                            
-<li >
-    <a href="../qld/">QLD 昆州担保</a>
-</li>
-                            
-<li >
-    <a href="../sa/">SA 南澳担保</a>
-</li>
-                            
-<li >
-    <a href="../tas/">TAS 塔州担保</a>
-</li>
-                            
-<li >
-    <a href="../vic/">VIC 维州担保</a>
-</li>
-                            
-<li >
-    <a href="../wa/">WA 西澳担保</a>
-</li>
-                            
-<li >
-    <a href="../GTI/">GTI全球人才计划</a>
-</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">新西兰移民 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../../nz/smc/">新西兰技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../nz/nz-joboffer/">新西兰雇主担保移民</a>
-</li>
-                            
-<li >
-    <a href="../../nz/nz-graduate/">新西兰留学移民</a>
-</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">美国移民 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../../am/eb1a/">美国EB-1A杰出人才移民</a>
-</li>
-                            
-<li >
-    <a href="../../am/niw/">美国NIW国家利益豁免移民</a>
-</li>
-                            
-<li >
-    <a href="../../am/eb3/">美国EB-3职业移民</a>
-</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他移民 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../../qt/km/">荷兰KM高技术移民</a>
-</li>
-                            
-<li >
-    <a href="../../qt/ger/">德国蓝卡移民</a>
-</li>
-                            
-<li >
-    <a href="../../qt/sgjoboffer/">新加坡雇主担保移民</a>
-</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">澳洲职业评估 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../../ass/aaca/">AACA 建筑师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/acs/">ACS 计算机评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/aim/">AIM 经理类评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/aiqs/">AIQS 工料测量师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/cpaa/">CPAA 会计职业评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/ea/">EA 工程师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/tra/">TRA 技工评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/vet/">VETASSESS 职业评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/aasw/">AASW 社工评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/acpsem/">ACPSEM 医学物理学家评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/acwa/">ACWA 社区工作者评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/adc/">ADC 牙医评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/aims/">AIMS 医学家评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/air/">AIR 放射医生评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/aitsl/">AITSL 教师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/anmac/">ANMAC 护士和助产士评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/anzoc/">ANZOC 整骨师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/anzsnm/">ANZSNM 核医学技师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/apc/">APC 物理治疗师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/apharmc/">APharmC 药剂师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/apodc/">APodC 脚医评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/aps/">APS 心理学家评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/avbc/">AVBC 兽医评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/ccea/">CCEA 按摩师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/daa/">DAA 营养学家评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/icaa/">ICAA 会计师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/ipa/">IPA 会计师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/mba/">MBA 医生评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/naati/">NAATI 翻译评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/ocanz/">OCANZ 验光师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/otc/">OTC 职业治疗师评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/spa/">SPA 语言病理学家评估</a>
-</li>
-                            
-<li >
-    <a href="../../ass/sssi/">SSSI 测量师评估</a>
-</li>
-                        </ul>
-                    </li>
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                    <li >
-                        <a rel="next" href="../mltssl/">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../points-test/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
-    </div>
-</div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#2019-2020stsol20191115">2019-2020财年澳洲技术移民短期移民职业列表STSOL(20191115)</a></li>
-            <li><a href="#stsol-">STSOL短期技术移民职业列表 - 飞出国</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#2019-2020stsol20191115" class="nav-link">2019-2020财年澳洲技术移民短期移民职业列表STSOL(20191115)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#stsol-" class="nav-link">STSOL短期技术移民职业列表 - 飞出国</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="2019-2020stsol20191115">2019-2020财年澳洲技术移民短期移民职业列表STSOL(20191115)</h1>
 <p>飞出国：2019年11月15日，澳大利亚技术移民最新短期职业列表发布，该列表适用于190州担保、491偏远地区担保及407、482和494签证的申请。当前STSOL列表中有217个职业。</p>
@@ -475,7 +485,7 @@
 <td>住宿和招待经理nec</td>
 <td>Accommodation and Hospitality Managers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>2</td>
@@ -491,7 +501,7 @@
 <td>广告经理</td>
 <td>Advertising Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/aim">AIM</a></td>
+<td><a href="/ass/aim">AIM</a></td>
 </tr>
 <tr>
 <td>4</td>
@@ -499,7 +509,7 @@
 <td>广告专家</td>
 <td>Advertising Specialist</td>
 <td>190/407/482/491/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>5</td>
@@ -507,7 +517,7 @@
 <td>飞机维修工程师(航空电子设备)</td>
 <td>Aircraft Maintenance Engineer (Avionics)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>6</td>
@@ -515,7 +525,7 @@
 <td>飞机维修工程师(机械)</td>
 <td>Aircraft Maintenance Engineer (Mechanical)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>7</td>
@@ -523,7 +533,7 @@
 <td>飞机维修工程师(结构)</td>
 <td>Aircraft Maintenance Engineer (Structures)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>8</td>
@@ -531,7 +541,7 @@
 <td>救护官员</td>
 <td>Ambulance Officer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>9</td>
@@ -539,7 +549,7 @@
 <td>麻醉技师</td>
 <td>Anaesthetic Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>10</td>
@@ -547,7 +557,7 @@
 <td>动物管理员和培训员nec</td>
 <td>Animal Attendants and Trainers nec</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>11</td>
@@ -555,7 +565,7 @@
 <td>养蜂人</td>
 <td>Apiarist</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>12</td>
@@ -563,7 +573,7 @@
 <td>乔木学家</td>
 <td>Arborist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>13</td>
@@ -571,7 +581,7 @@
 <td>建筑制图员</td>
 <td>Architectural Draftsperson</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>14</td>
@@ -579,7 +589,7 @@
 <td>建筑、楼宇和测量技术人员nec</td>
 <td>Architectural, Building and Surveying Technicians nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>15</td>
@@ -587,7 +597,7 @@
 <td>美术教师(私教)</td>
 <td>Art Teacher (Private Tuition)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>16</td>
@@ -595,7 +605,7 @@
 <td>面包师</td>
 <td>Baker</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>17</td>
@@ -611,7 +621,7 @@
 <td>建筑督察</td>
 <td>Building Inspector</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>19</td>
@@ -619,7 +629,7 @@
 <td>商业机器修理工</td>
 <td>Business Machine Mechanic</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>20</td>
@@ -627,7 +637,7 @@
 <td>屠夫或小商品制造商</td>
 <td>Butcher or Smallgoods Maker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>21</td>
@@ -635,7 +645,7 @@
 <td>线缆工（数据通信）</td>
 <td>Cabler (Data and Telecommunications)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>22</td>
@@ -643,7 +653,7 @@
 <td>咖啡厅或餐厅经理</td>
 <td>Cafe or Restaurant Manager</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>23</td>
@@ -651,7 +661,7 @@
 <td>摄像机操作员（电影，电视或视频）</td>
 <td>Camera Operator (Film, Television or Video)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>24</td>
@@ -659,7 +669,7 @@
 <td>心脏技术员</td>
 <td>Cardiac Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>25</td>
@@ -667,7 +677,7 @@
 <td>职业顾问</td>
 <td>Careers Counsellor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>26</td>
@@ -675,7 +685,7 @@
 <td>化学技师</td>
 <td>Chemistry Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>27</td>
@@ -683,7 +693,7 @@
 <td>商品交易员</td>
 <td>Commodities Trader</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>28</td>
@@ -691,7 +701,7 @@
 <td>社区工作者</td>
 <td>Community Worker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acwa">ACWA</a></td>
+<td><a href="/ass/acwa">ACWA</a></td>
 </tr>
 <tr>
 <td>29</td>
@@ -699,7 +709,7 @@
 <td>公司秘书</td>
 <td>Company Secretary</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>30</td>
@@ -707,7 +717,7 @@
 <td>其他辅助健康治疗师</td>
 <td>Complementary Health Therapists nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>31</td>
@@ -715,7 +725,7 @@
 <td>会议和活动组织者</td>
 <td>Conference and Event Organiser</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>32</td>
@@ -723,7 +733,7 @@
 <td>合同管理员</td>
 <td>Contract Administrator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>33</td>
@@ -731,7 +741,7 @@
 <td>厨师</td>
 <td>Cook</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>34</td>
@@ -739,7 +749,7 @@
 <td>文案</td>
 <td>Copywriter</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>35</td>
@@ -747,7 +757,7 @@
 <td>企业服务经理</td>
 <td>Corporate Services Manager</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>36</td>
@@ -755,7 +765,7 @@
 <td>顾问nec</td>
 <td>Counsellors nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>37</td>
@@ -763,7 +773,7 @@
 <td>客户服务经理</td>
 <td>Customer Service Manager</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>38</td>
@@ -771,7 +781,7 @@
 <td>舞蹈教师（私教）</td>
 <td>Dance Teacher (Private Tuition)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>39</td>
@@ -779,7 +789,7 @@
 <td>数据库管理员</td>
 <td>Database Administrator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>40</td>
@@ -787,7 +797,7 @@
 <td>牙科专家</td>
 <td>Dental Specialist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/adc">ADC</a></td>
+<td><a href="/ass/adc">ADC</a></td>
 </tr>
 <tr>
 <td>41</td>
@@ -795,7 +805,7 @@
 <td>牙科技师</td>
 <td>Dental Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>42</td>
@@ -803,7 +813,7 @@
 <td>营养师</td>
 <td>Dietitian</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/daa">DAA</a></td>
+<td><a href="/ass/daa">DAA</a></td>
 </tr>
 <tr>
 <td>43</td>
@@ -811,7 +821,7 @@
 <td>导演(电影、电视、电台或舞台)</td>
 <td>Director (Film, Television, Radio or Stage)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>44</td>
@@ -819,7 +829,7 @@
 <td>残疾服务主任</td>
 <td>Disabilities Services Officer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acwa">ACWA</a></td>
+<td><a href="/ass/acwa">ACWA</a></td>
 </tr>
 <tr>
 <td>45</td>
@@ -827,7 +837,7 @@
 <td>重新振作治疗师</td>
 <td>Diversional Therapist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>46</td>
@@ -835,7 +845,7 @@
 <td>潜水教练(露天水域)</td>
 <td>Diving Instructor (Open Water)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>47</td>
@@ -843,7 +853,7 @@
 <td>训犬师</td>
 <td>Dog Handler or Trainer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>48</td>
@@ -851,7 +861,7 @@
 <td>裁缝</td>
 <td>Dressmaker or Tailor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>49</td>
@@ -859,7 +869,7 @@
 <td>毒品和酒精顾问</td>
 <td>Drug and Alcohol Counsellor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>50</td>
@@ -867,7 +877,7 @@
 <td>地球科学技术员</td>
 <td>Earth Science Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>51</td>
@@ -875,7 +885,7 @@
 <td>教育顾问</td>
 <td>Education Adviser</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>52</td>
@@ -883,7 +893,7 @@
 <td>教育管理者nec</td>
 <td>Education Managers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>53</td>
@@ -891,7 +901,7 @@
 <td>在职护士</td>
 <td>Enrolled Nurse</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/anmac">ANMAC</a></td>
+<td><a href="/ass/anmac">ANMAC</a></td>
 </tr>
 <tr>
 <td>54</td>
@@ -899,7 +909,7 @@
 <td>设备经理</td>
 <td>Facilities Manager</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>55</td>
@@ -907,7 +917,7 @@
 <td>家庭和婚姻顾问</td>
 <td>Family and Marriage Counsellor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>56</td>
@@ -915,7 +925,7 @@
 <td>家庭支助工</td>
 <td>Family Support Worker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acwa">ACWA</a></td>
+<td><a href="/ass/acwa">ACWA</a></td>
 </tr>
 <tr>
 <td>57</td>
@@ -923,7 +933,7 @@
 <td>蹄铁匠</td>
 <td>Farrier</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>58</td>
@@ -931,7 +941,7 @@
 <td>时装设计师</td>
 <td>Fashion Designer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>59</td>
@@ -939,7 +949,7 @@
 <td>电影和视频编辑</td>
 <td>Film and Video Editor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>60</td>
@@ -947,7 +957,7 @@
 <td>金融经纪人</td>
 <td>Finance Broker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>61</td>
@@ -955,7 +965,7 @@
 <td>财务经理</td>
 <td>Finance Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/icaa">CAANZ</a>/<a href="../../ass/cpaa">CPAA</a>/<a href="../../ass/ipa">IPA</a></td>
+<td><a href="/ass/icaa">CAANZ</a>/<a href="/ass/cpaa">CPAA</a>/<a href="/ass/ipa">IPA</a></td>
 </tr>
 <tr>
 <td>62</td>
@@ -963,7 +973,7 @@
 <td>金融经纪人nec</td>
 <td>Financial Brokers nec</td>
 <td>190/491/482/407/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>63</td>
@@ -971,7 +981,7 @@
 <td>金融交易商nec</td>
 <td>Financial Dealers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>64</td>
@@ -979,7 +989,7 @@
 <td>金融机构分行经理</td>
 <td>Financial Institution Branch Manager</td>
 <td>491/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>65</td>
@@ -987,7 +997,7 @@
 <td>金融投资顾问</td>
 <td>Financial Investment Adviser</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>66</td>
@@ -995,7 +1005,7 @@
 <td>金融投资经理</td>
 <td>Financial Investment Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>67</td>
@@ -1003,7 +1013,7 @@
 <td>金融市场交易商</td>
 <td>Financial Market Dealer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>68</td>
@@ -1011,7 +1021,7 @@
 <td>花商</td>
 <td>Florist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>69</td>
@@ -1019,7 +1029,7 @@
 <td>花农</td>
 <td>Flower Grower</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>70</td>
@@ -1027,7 +1037,7 @@
 <td>家具润饰工</td>
 <td>Furniture Finisher</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>71</td>
@@ -1035,7 +1045,7 @@
 <td>画廊或博物馆馆长</td>
 <td>Gallery or Museum Curator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>72</td>
@@ -1043,7 +1053,7 @@
 <td>园丁(普通)</td>
 <td>Gardener (General)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>73</td>
@@ -1051,7 +1061,7 @@
 <td>地质学家</td>
 <td>Geologist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>74</td>
@@ -1059,7 +1069,7 @@
 <td>葡萄种植者</td>
 <td>Grape Grower</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>75</td>
@@ -1067,7 +1077,7 @@
 <td>平面设计师</td>
 <td>Graphic Designer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>76</td>
@@ -1075,7 +1085,7 @@
 <td>球场管理员</td>
 <td>Greenkeeper</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>77</td>
@@ -1083,7 +1093,7 @@
 <td>体操教练或教员</td>
 <td>Gymnastics Coach or Instructor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>78</td>
@@ -1091,7 +1101,7 @@
 <td>理发师</td>
 <td>Hairdresser</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>79</td>
@@ -1099,7 +1109,7 @@
 <td>硬件技术员</td>
 <td>Hardware Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>80</td>
@@ -1107,7 +1117,7 @@
 <td>其他未分类卫生和福利服务经理</td>
 <td>Health and Welfare Services Managers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>81</td>
@@ -1115,7 +1125,7 @@
 <td>其他健康诊断和推广专业人</td>
 <td>Health Diagnostic and Promotion Professionals nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>82</td>
@@ -1123,7 +1133,7 @@
 <td>卫生信息管理员</td>
 <td>Health Information Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>83</td>
@@ -1131,7 +1141,7 @@
 <td>健康推广主任</td>
 <td>Health Promotion Officer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>84</td>
@@ -1139,7 +1149,7 @@
 <td>骑马教练或教员</td>
 <td>Horse Riding Coach or Instructor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>85</td>
@@ -1147,7 +1157,7 @@
 <td>医院药剂师</td>
 <td>Hospital Pharmacist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/apharmc">APharmC</a></td>
+<td><a href="/ass/apharmc">APharmC</a></td>
 </tr>
 <tr>
 <td>86</td>
@@ -1155,7 +1165,7 @@
 <td>酒店或汽车旅馆经理</td>
 <td>Hotel or Motel Manager</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>87</td>
@@ -1163,7 +1173,7 @@
 <td>人力资源经理</td>
 <td>Human Resource Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/aim">AIM</a></td>
+<td><a href="/ass/aim">AIM</a></td>
 </tr>
 <tr>
 <td>88</td>
@@ -1171,7 +1181,7 @@
 <td>ICT客户经理</td>
 <td>ICT Account Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>89</td>
@@ -1179,7 +1189,7 @@
 <td>信息和通信技术业务发展经理</td>
 <td>ICT Business Development Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>90</td>
@@ -1187,7 +1197,7 @@
 <td>信息通信技术客户支持</td>
 <td>ICT Customer Support Officer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>91</td>
@@ -1195,7 +1205,7 @@
 <td>其他未分类信息和通信技术经理</td>
 <td>ICT Managers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>92</td>
@@ -1203,7 +1213,7 @@
 <td>信息和通信技术项目经理</td>
 <td>ICT Project Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>93</td>
@@ -1211,7 +1221,7 @@
 <td>信息和通信技术质量保证工程师</td>
 <td>ICT Quality Assurance Engineer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>94</td>
@@ -1219,7 +1229,7 @@
 <td>信息和通信技术销售代表</td>
 <td>ICT Sales Representative</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>95</td>
@@ -1227,7 +1237,7 @@
 <td>其他未分类信息和通信技术支持和测试工程师</td>
 <td>ICT Support and Test Engineers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>96</td>
@@ -1235,7 +1245,7 @@
 <td>信息和通信技术支持工程师</td>
 <td>ICT Support Engineer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>97</td>
@@ -1243,7 +1253,7 @@
 <td>信息和通信技术支持技术员</td>
 <td>ICT Support Technicians nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>98</td>
@@ -1251,7 +1261,7 @@
 <td>信息和通信技术系统测试工程师</td>
 <td>ICT Systems Test Engineer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>99</td>
@@ -1259,7 +1269,7 @@
 <td>ICT培训师</td>
 <td>ICT Trainer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>100</td>
@@ -1267,7 +1277,7 @@
 <td>插图画家</td>
 <td>Illustrator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>101</td>
@@ -1275,7 +1285,7 @@
 <td>工业设计师</td>
 <td>Industrial Designer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>102</td>
@@ -1283,7 +1293,7 @@
 <td>工业药剂师</td>
 <td>Industrial Pharmacist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>103</td>
@@ -1291,7 +1301,7 @@
 <td>信息和组织专业人员</td>
 <td>Information and Organisation Professionals nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>104</td>
@@ -1299,7 +1309,7 @@
 <td>保险经纪</td>
 <td>Insurance Agent</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>105</td>
@@ -1307,7 +1317,7 @@
 <td>保险经纪人</td>
 <td>Insurance Broker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>106</td>
@@ -1315,14 +1325,14 @@
 <td>保险理赔员</td>
 <td>Insurance Loss Adjuster</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>107 <a href="http://bbs.fcgvisa.com/t/flyabroad/1295?target=blank">411112</a></td>
 <td>重症监护救护车医务人员</td>
 <td>Intensive Care Ambulance Paramedic</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1331,7 +1341,7 @@
 <td>室内设计师</td>
 <td>Interior Designer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>109</td>
@@ -1339,7 +1349,7 @@
 <td>口译</td>
 <td>Interpreter</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/naati">NAATI</a></td>
+<td><a href="/ass/naati">NAATI</a></td>
 </tr>
 <tr>
 <td>110</td>
@@ -1347,7 +1357,7 @@
 <td>珠宝匠</td>
 <td>Jeweller</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>111</td>
@@ -1355,7 +1365,7 @@
 <td>珠宝设计师</td>
 <td>Jewellery Designer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>112</td>
@@ -1363,7 +1373,7 @@
 <td>记者和其他作家</td>
 <td>Journalists and Other Writers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>113</td>
@@ -1371,7 +1381,7 @@
 <td>司法和其他法律专业人员</td>
 <td>Judicial and Other Legal Professionals nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>114</td>
@@ -1379,7 +1389,7 @@
 <td>实验室经理</td>
 <td>Laboratory Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>115</td>
@@ -1387,7 +1397,7 @@
 <td>园艺师</td>
 <td>Landscape Gardener</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>116</td>
@@ -1395,7 +1405,7 @@
 <td>图书管理员</td>
 <td>Librarian</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>117</td>
@@ -1403,7 +1413,7 @@
 <td>生命科学技术员</td>
 <td>Life Science Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>118</td>
@@ -1411,7 +1421,7 @@
 <td>化妆师</td>
 <td>Make Up Artist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>119</td>
@@ -1419,7 +1429,7 @@
 <td>制造商</td>
 <td>Manufacturer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>120</td>
@@ -1427,7 +1437,7 @@
 <td>市场营销专员</td>
 <td>Marketing Specialist</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>121</td>
@@ -1435,7 +1445,7 @@
 <td>按摩治疗师</td>
 <td>Massage Therapist</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>122</td>
@@ -1443,7 +1453,7 @@
 <td>数学家</td>
 <td>Mathematician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>123</td>
@@ -1451,7 +1461,7 @@
 <td>肉类检查员</td>
 <td>Meat Inspector</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>124</td>
@@ -1459,7 +1469,7 @@
 <td>机械工程技术员</td>
 <td>Mechanical Engineering Technician</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>125</td>
@@ -1467,7 +1477,7 @@
 <td>医学实验室技术员</td>
 <td>Medical Laboratory Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/aims">AIMS</a></td>
+<td><a href="/ass/aims">AIMS</a></td>
 </tr>
 <tr>
 <td>126</td>
@@ -1475,7 +1485,7 @@
 <td>其他医疗技师</td>
 <td>Medical Technicians nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>127</td>
@@ -1483,7 +1493,7 @@
 <td>金属钳工和机械师nec</td>
 <td>Metal Fitters and Machinists nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>128</td>
@@ -1491,7 +1501,7 @@
 <td>冶金或材料技术员</td>
 <td>Metallurgical or Materials Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>129</td>
@@ -1499,7 +1509,7 @@
 <td>中学教师(澳大利亚)/中级学校教师(新西兰)</td>
 <td>Middle School Teacher</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/aitsl">AITSL</a></td>
+<td><a href="/ass/aitsl">AITSL</a></td>
 </tr>
 <tr>
 <td>130</td>
@@ -1507,7 +1517,7 @@
 <td>矿副</td>
 <td>Mine Deputy</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>131</td>
@@ -1523,7 +1533,7 @@
 <td>专业音乐人nec</td>
 <td>Music Professionals nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>133</td>
@@ -1531,7 +1541,7 @@
 <td>音乐教师（私教）</td>
 <td>Music Teacher (Private Tuition)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>134</td>
@@ -1539,7 +1549,7 @@
 <td>自然疗法医师</td>
 <td>Naturopath</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>135</td>
@@ -1547,7 +1557,7 @@
 <td>网络管理员</td>
 <td>Network Administrator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>136</td>
@@ -1555,7 +1565,7 @@
 <td>网络分析师</td>
 <td>Network Analyst</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>137</td>
@@ -1563,7 +1573,7 @@
 <td>报纸或期刊编辑</td>
 <td>Newspaper or Periodical Editor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>138</td>
@@ -1571,7 +1581,7 @@
 <td>护士教育家</td>
 <td>Nurse Educator</td>
 <td>491/190/407/494</td>
-<td><a href="../../ass/anmac">ANMAC</a></td>
+<td><a href="/ass/anmac">ANMAC</a></td>
 </tr>
 <tr>
 <td>139</td>
@@ -1579,7 +1589,7 @@
 <td>护士长</td>
 <td>Nurse Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/anmac">ANMAC</a></td>
+<td><a href="/ass/anmac">ANMAC</a></td>
 </tr>
 <tr>
 <td>140</td>
@@ -1587,7 +1597,7 @@
 <td>护士研究员</td>
 <td>Nurse Researcher</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/anmac">ANMAC</a></td>
+<td><a href="/ass/anmac">ANMAC</a></td>
 </tr>
 <tr>
 <td>141</td>
@@ -1595,7 +1605,7 @@
 <td>营养学家</td>
 <td>Nutritionist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>142</td>
@@ -1603,7 +1613,7 @@
 <td>职业健康与安全顾问</td>
 <td>Occupational Health and Safety Adviser</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>143</td>
@@ -1611,7 +1621,7 @@
 <td>组织和方法分析师</td>
 <td>Organisation and Methods Analyst</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>144</td>
@@ -1619,7 +1629,7 @@
 <td>视觉矫正师</td>
 <td>Orthoptist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>145</td>
@@ -1627,7 +1637,7 @@
 <td>其他体育教练或教员</td>
 <td>Other Sports Coach or Instructor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>146</td>
@@ -1635,7 +1645,7 @@
 <td>面点师</td>
 <td>Pastrycook</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>147</td>
@@ -1643,7 +1653,7 @@
 <td>专利审查员</td>
 <td>Patents Examiner</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>148</td>
@@ -1651,7 +1661,7 @@
 <td>其他未分类演艺技工</td>
 <td>Performing Arts Technicians nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>149</td>
@@ -1659,7 +1669,7 @@
 <td>药房技术员</td>
 <td>Pharmacy Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>150</td>
@@ -1667,7 +1677,7 @@
 <td>摄影师</td>
 <td>Photographer</td>
 <td>491/190/482/407/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>151</td>
@@ -1675,7 +1685,7 @@
 <td>家禽饲养员</td>
 <td>Poultry Farmer</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>152</td>
@@ -1683,7 +1693,7 @@
 <td>发电厂操作员</td>
 <td>Power Generation Plant Operator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>153</td>
@@ -1691,7 +1701,7 @@
 <td>精密仪器制造和修理工</td>
 <td>Precision Instrument Maker and Repairer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>154</td>
@@ -1699,7 +1709,7 @@
 <td>其他初级产品检查员</td>
 <td>Primary Products Inspectors nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>155</td>
@@ -1707,7 +1717,7 @@
 <td>小学教师</td>
 <td>Primary School Teacher</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/aitsl">AITSL</a></td>
+<td><a href="/ass/aitsl">AITSL</a></td>
 </tr>
 <tr>
 <td>156</td>
@@ -1715,7 +1725,7 @@
 <td>打印装订工</td>
 <td>Print Finisher</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>157</td>
@@ -1723,7 +1733,7 @@
 <td>报刊杂志记者</td>
 <td>Print Journalist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>158</td>
@@ -1731,7 +1741,7 @@
 <td>印刷技工</td>
 <td>Printing Machinist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>159</td>
@@ -1739,7 +1749,7 @@
 <td>私人导师和教师nec</td>
 <td>Private Tutors and Teachers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>160</td>
@@ -1747,7 +1757,7 @@
 <td>生产经理(林业)</td>
 <td>Production Manager (Forestry)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>161</td>
@@ -1755,7 +1765,7 @@
 <td>生产经理(制造业)</td>
 <td>Production Manager (Manufacturing)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>162</td>
@@ -1763,7 +1773,7 @@
 <td>生产经理(采矿)</td>
 <td>Production Manager (Mining)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>163</td>
@@ -1771,7 +1781,7 @@
 <td>项目总监(电视或电台)</td>
 <td>Program Director (Television or Radio)</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>164</td>
@@ -1779,7 +1789,7 @@
 <td>计划或项目管理员</td>
 <td>Program or Project Administrator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>165</td>
@@ -1787,7 +1797,7 @@
 <td>心理治疗师</td>
 <td>Psychotherapist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>166</td>
@@ -1795,7 +1805,7 @@
 <td>公共关系专员</td>
 <td>Public Relations Professional</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>167</td>
@@ -1803,7 +1813,7 @@
 <td>质量保证经理</td>
 <td>Quality Assurance Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>168</td>
@@ -1811,7 +1821,7 @@
 <td>记录管理员</td>
 <td>Records Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>169</td>
@@ -1819,7 +1829,7 @@
 <td>娱乐官员</td>
 <td>Recreation Officer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>170</td>
@@ -1827,7 +1837,7 @@
 <td>招聘顾问</td>
 <td>Recruitment Consultant</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>171</td>
@@ -1835,7 +1845,7 @@
 <td>康复顾问</td>
 <td>Rehabilitation Counsellor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>172</td>
@@ -1843,7 +1853,7 @@
 <td>研发经理</td>
 <td>Research and Development Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>173</td>
@@ -1851,7 +1861,7 @@
 <td>驻院医务人员</td>
 <td>Resident Medical Officer</td>
 <td>491/190/407/482<em> /494</em></td>
-<td><a href="../../ass/spa">MedBA</a></td>
+<td><a href="/ass/spa">MedBA</a></td>
 </tr>
 <tr>
 <td>174</td>
@@ -1859,7 +1869,7 @@
 <td>安老院主任</td>
 <td>Residential Care Officer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acwa">ACWA</a></td>
+<td><a href="/ass/acwa">ACWA</a></td>
 </tr>
 <tr>
 <td>175</td>
@@ -1867,7 +1877,7 @@
 <td>零售采购员</td>
 <td>Retail Buyer</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>176</td>
@@ -1875,7 +1885,7 @@
 <td>零售药剂师</td>
 <td>Retail Pharmacist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/apharmc">APharmC</a></td>
+<td><a href="/ass/apharmc">APharmC</a></td>
 </tr>
 <tr>
 <td>177</td>
@@ -1883,7 +1893,7 @@
 <td>屋顶铺瓦工</td>
 <td>Roof Tiler</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>178</td>
@@ -1891,7 +1901,7 @@
 <td>销售市场经理</td>
 <td>Sales and Marketing Manager</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/aim">AIM</a></td>
+<td><a href="/ass/aim">AIM</a></td>
 </tr>
 <tr>
 <td>179</td>
@@ -1899,7 +1909,7 @@
 <td>校长</td>
 <td>School Principal</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>180</td>
@@ -1907,7 +1917,7 @@
 <td>其他科学技术员</td>
 <td>Science Technicians nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>181</td>
@@ -1915,7 +1925,7 @@
 <td>标牌撰写工</td>
 <td>Signwriter</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>182</td>
@@ -1923,7 +1933,7 @@
 <td>雪上运动指导员</td>
 <td>Snowsport Instructor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>183</td>
@@ -1931,7 +1941,7 @@
 <td>社会专业人员nec</td>
 <td>Social Professionals nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>184</td>
@@ -1939,7 +1949,7 @@
 <td>软件测试员</td>
 <td>Software Tester</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>185</td>
@@ -1947,7 +1957,7 @@
 <td>录音师</td>
 <td>Sound Technician</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>186</td>
@@ -1955,7 +1965,7 @@
 <td>未分类的专业经理人</td>
 <td>Specialist Managers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>187</td>
@@ -1963,7 +1973,7 @@
 <td>体育发展主任</td>
 <td>Sports Development Officer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>188</td>
@@ -1971,7 +1981,7 @@
 <td>其他未分类体育运动员</td>
 <td>Sportspersons nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>189</td>
@@ -1979,7 +1989,7 @@
 <td>剧务</td>
 <td>Stage Manager</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>190</td>
@@ -1987,7 +1997,7 @@
 <td>证券经纪交易商</td>
 <td>Stockbroking Dealer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>191</td>
@@ -1995,7 +2005,7 @@
 <td>学生辅导</td>
 <td>Student Counsellor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>192</td>
@@ -2003,7 +2013,7 @@
 <td>供应及分销经理</td>
 <td>Supply and Distribution Manager</td>
 <td>491/407/482*/494</td>
-<td><a href="../../ass/aim">AIM</a></td>
+<td><a href="/ass/aim">AIM</a></td>
 </tr>
 <tr>
 <td>193</td>
@@ -2011,7 +2021,7 @@
 <td>游泳教练或教员</td>
 <td>Swimming Coach or Instructor</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>194</td>
@@ -2019,7 +2029,7 @@
 <td>系统管理员</td>
 <td>Systems Administrator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>195</td>
@@ -2027,7 +2037,7 @@
 <td>讲其他语言的学生英语教师</td>
 <td>Teacher of English to Speakers of Other Languages</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>196</td>
@@ -2035,7 +2045,7 @@
 <td>技术总监</td>
 <td>Technical Director</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>197</td>
@@ -2043,7 +2053,7 @@
 <td>其他未分类技术销售代表</td>
 <td>Technical Sales Representatives nec</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>198</td>
@@ -2051,7 +2061,7 @@
 <td>技术文档撰写人</td>
 <td>Technical Writer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>199</td>
@@ -2059,7 +2069,7 @@
 <td>电信接线员</td>
 <td>Telecommunications Linesworker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>200</td>
@@ -2067,7 +2077,7 @@
 <td>电视记者</td>
 <td>Television Journalist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>201</td>
@@ -2075,7 +2085,7 @@
 <td>模具工人</td>
 <td>Toolmaker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>202</td>
@@ -2091,7 +2101,7 @@
 <td>运输公司经理</td>
 <td>Transport Company Manager</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>204</td>
@@ -2099,7 +2109,7 @@
 <td>家俱商</td>
 <td>Upholsterer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>205</td>
@@ -2107,7 +2117,7 @@
 <td>城市和区域规划师</td>
 <td>Urban and Regional Planner</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>206</td>
@@ -2115,7 +2125,7 @@
 <td>菜农(澳洲) /商品蔬菜园经营者(新西兰)</td>
 <td>Vegetable Grower</td>
 <td>491/190/407/482*/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>207</td>
@@ -2123,7 +2133,7 @@
 <td>车身制造工</td>
 <td>Vehicle Body Builder</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>208</td>
@@ -2131,7 +2141,7 @@
 <td>汽车翻修工</td>
 <td>Vehicle Trimmer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>209</td>
@@ -2139,7 +2149,7 @@
 <td>兽医护士</td>
 <td>Veterinary Nurse</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>210</td>
@@ -2147,7 +2157,7 @@
 <td>视频制作人</td>
 <td>Video Producer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>211</td>
@@ -2155,7 +2165,7 @@
 <td>网站管理员</td>
 <td>Web Administrator</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>212</td>
@@ -2163,7 +2173,7 @@
 <td>网页设计师</td>
 <td>Web Designer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/vet">VETASSESS</a></td>
+<td><a href="/ass/vet">VETASSESS</a></td>
 </tr>
 <tr>
 <td>213</td>
@@ -2171,7 +2181,7 @@
 <td>网页开发工程师</td>
 <td>Web Developer</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acs">ACS</a></td>
+<td><a href="/ass/acs">ACS</a></td>
 </tr>
 <tr>
 <td>214</td>
@@ -2179,7 +2189,7 @@
 <td>福利工作者</td>
 <td>Welfare Worker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acwa">ACWA</a></td>
+<td><a href="/ass/acwa">ACWA</a></td>
 </tr>
 <tr>
 <td>215</td>
@@ -2187,7 +2197,7 @@
 <td>木材机械工</td>
 <td>Wood Machinist</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>216</td>
@@ -2195,7 +2205,7 @@
 <td>木工机械师和其他木材技工工人</td>
 <td>Wood Machinists and Other Wood Trades Workers nec</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/tra">TRA</a></td>
+<td><a href="/ass/tra">TRA</a></td>
 </tr>
 <tr>
 <td>217</td>
@@ -2203,7 +2213,7 @@
 <td>青年工作者</td>
 <td>Youth Worker</td>
 <td>491/190/407/482/494</td>
-<td><a href="../../ass/acwa">ACWA</a></td>
+<td><a href="/ass/acwa">ACWA</a></td>
 </tr>
 </tbody>
 </table>
@@ -2212,22 +2222,47 @@
 <p>以上内容由<code>飞出国出入境服务</code>（<a href="http://flyabroad.io">flyabroad.io</a>）独家整理完成，请尊重知识产权，转载请保留并注明出处。（2020-08-12更新）</p>
 <p>欢迎关注飞出国移民公众号 <font color=Blue>(微信号fcg-js)</font> 获取更多信息，也可直接联系飞出国工作人员 <font color=Blue>（微信号flyabroad2021)</font> 直接进行沟通。</p>
 </blockquote></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
                 <p>Copyright &copy; 2005-2020 <a href="http://flyabroad.com.hk/" target="_blank">飞出国</a>，powered by <a href="http://flyabroad.me/" target="_blank">FLYabroad</a>。</p>
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script>var base_url = '../..';</script>
-        <script src="../../js/base.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -2239,19 +2274,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><kbd>?</kbd></td>
+                    <td class="help shortcut"><kbd>?</kbd></td>
                     <td>Open this help</td>
                   </tr>
                   <tr>
-                    <td><kbd>&larr;</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>&rarr;</kbd></td>
+                    <td class="next shortcut"><kbd>n</kbd></td>
                     <td>Next page</td>
                   </tr>
                   <tr>
-                    <td><kbd>s</kbd></td>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
                     <td>Search</td>
                   </tr>
                 </tbody>
@@ -2262,7 +2297,6 @@
         </div>
     </div>
 </div>
-
 
     </body>
 </html>
