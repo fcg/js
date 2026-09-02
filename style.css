@@ -1,0 +1,146 @@
+/* ===== 飞出国网站 - 全局样式 ===== */  
+  
+/* 1. 配色变量 */  
+:root {  
+  --primary: #0057B7;  
+  --primary-light: #1a6fd1;  
+  --accent: #FF6B35;  
+  --accent-hover: #e55a2b;  
+  --bg: #F8FAFC;  
+  --card-bg: #FFFFFF;  
+  --text: #1A1A2E;  
+  --text-light: #64748B;  
+  --border: #E2E8F0;  
+  --shadow: 0 4px 20px rgba(0,0,0,0.06);  
+  --radius: 12px;  
+}  
+  
+/* 2. 全局基础样式 */  
+body {  
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;  
+  background: var(--bg);  
+  color: var(--text);  
+  line-height: 1.7;  
+  margin: 0;  
+  padding: 0;  
+}  
+  
+/* 3. 内容容器 - 居中+最大宽度 */  
+.wy-nav-content, .md-content, main, article {  
+  max-width: 1200px !important;  
+  margin: 0 auto !important;  
+  padding: 2rem 1.5rem !important;  
+  background: transparent !important;  
+  border-radius: 0 !important;  
+}  
+  
+/* 4. 卡片化 - 所有区块加圆角阴影 */  
+.wy-nav-content > *, .md-content > *,   
+section, .section, .admonition, .note, .tip, .warning {  
+  background: var(--card-bg) !important;  
+  border-radius: var(--radius) !important;  
+  box-shadow: var(--shadow) !important;  
+  padding: 1.5rem !important;  
+  margin-bottom: 1.5rem !important;  
+  border: 1px solid var(--border) !important;  
+}  
+  
+/* 5. 标题美化 */  
+h1, h2, h3, h4 {  
+  color: var(--primary) !important;  
+  font-weight: 600 !important;  
+  letter-spacing: -0.02em;  
+}  
+h1 { font-size: 2.2rem !important; border-bottom: 3px solid var(--accent); padding-bottom: 0.5rem; }  
+h2 { font-size: 1.6rem !important; }  
+h3 { font-size: 1.2rem !important; }  
+  
+/* 6. 链接美化 */  
+a {  
+  color: var(--primary) !important;  
+  text-decoration: none !important;  
+  transition: color 0.2s;  
+}  
+a:hover {  
+  color: var(--accent) !important;  
+  text-decoration: underline !important;  
+}  
+  
+/* 7. 按钮美化 */  
+.btn, button, .md-button, .md-typeset .md-button {  
+  background: var(--primary) !important;  
+  color: #fff !important;  
+  border: none !important;  
+  border-radius: 8px !important;  
+  padding: 0.6rem 1.5rem !important;  
+  font-weight: 500 !important;  
+  transition: all 0.2s !important;  
+  cursor: pointer !important;  
+}  
+.btn:hover, button:hover, .md-button:hover {  
+  background: var(--accent) !important;  
+  transform: translateY(-1px) !important;  
+  box-shadow: 0 4px 12px rgba(255,107,53,0.3) !important;  
+}  
+  
+/* 8. 表格美化 */  
+table {  
+  border-collapse: separate !important;  
+  border-spacing: 0 !important;  
+  width: 100% !important;  
+  border-radius: var(--radius) !important;  
+  overflow: hidden !important;  
+  box-shadow: var(--shadow) !important;  
+}  
+th {  
+  background: var(--primary) !important;  
+  color: #fff !important;  
+  padding: 0.8rem 1rem !important;  
+  font-weight: 500 !important;  
+}  
+td {  
+  padding: 0.7rem 1rem !important;  
+  border-bottom: 1px solid var(--border) !important;  
+}  
+tr:last-child td { border-bottom: none !important; }  
+tr:hover td { background: #F1F5F9 !important; }  
+  
+/* 9. 代码块美化 */  
+pre, code, .highlight {  
+  border-radius: 8px !important;  
+  background: #1E293B !important;  
+  color: #E2E8F0 !important;  
+  padding: 1rem !important;  
+  font-size: 0.9rem !important;  
+}  
+  
+/* 10. 导航栏美化 */  
+nav, .wy-nav-side, .md-sidebar, .md-header {  
+  background: var(--primary) !important;  
+  color: #fff !important;  
+}  
+nav a, .wy-nav-side a, .md-sidebar a {  
+  color: rgba(255,255,255,0.85) !important;  
+}  
+nav a:hover, .wy-nav-side a:hover {  
+  color: #fff !important;  
+  background: rgba(255,255,255,0.1) !important;  
+}  
+  
+/* 11. 页脚美化 */  
+footer, .md-footer {  
+  background: var(--primary) !important;  
+  color: rgba(255,255,255,0.8) !important;  
+  padding: 2rem !important;  
+  text-align: center !important;  
+  margin-top: 3rem !important;  
+}  
+  
+/* 12. 响应式 - 手机适配 */  
+@media (max-width: 768px) {  
+  .wy-nav-content, .md-content, main, article {  
+    padding: 1rem !important;  
+  }  
+  h1 { font-size: 1.6rem !important; }  
+  h2 { font-size: 1.3rem !important; }  
+}  
