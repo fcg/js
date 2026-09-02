@@ -15,8 +15,18 @@ body.container {
     padding-right: 30px;  
     margin: 0 auto;  
 }  
-body .wrapper,  
-body .site-inner 
+body .wrapper{  
+    max-width: 100%;  
+    padding-left: 30px;  
+    padding-right: 30px;  
+    margin: 0 auto;  
+}   
+body .site-inner {  
+    max-width: 100%;  
+    padding-left: 30px;  
+    padding-right: 30px;  
+    margin: 0 auto;  
+}  
   
 /* ===== 2. 导航栏优化 ===== */  
 .md-header {  
