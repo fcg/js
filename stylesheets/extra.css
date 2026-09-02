@@ -9,14 +9,14 @@ body, .md-content, .md-typeset {
   line-height: 1.8;  
 } 
 
-body .container,  
-body .wrapper,  
-body .site-inner {  
-    max-width: 100% !important;  
-    width: 100% !important;  
-    padding-left: 30px !important;  
-    padding-right: 30px !important;  
+body.container {  
+    max-width: 100%;  
+    padding-left: 30px;  
+    padding-right: 30px;  
+    margin: 0 auto;  
 }  
+body .wrapper,  
+body .site-inner 
   
 /* ===== 2. 导航栏优化 ===== */  
 .md-header {  
@@ -146,7 +146,41 @@ nav .container,
 ::-webkit-scrollbar-thumb:hover { background: #64748b; }  
   
 /* ===== 10. 响应式 ===== */  
-@media (max-width: 768px) {  
+@media (max-width: 1600px) {  
   .md-typeset h1 { font-size: 1.6rem !important; }  
   .md-typeset h2 { font-size: 1.2rem !important; }  
+}  
+/* ===== 导航位移修复 ===== */  
+  
+/* 1. 预先为导航链接设置透明下边框，避免悬停时添加边框导致高度变化 */  
+.navbar .nav-link {  
+    border-bottom: 3px solid transparent !important;  
+    padding: 8px 15px !important;  
+    transition: border-color 0.3s ease, color 0.3s ease !important;  
+    /* 禁止悬停时加粗，避免宽度变化 */  
+    font-weight: normal !important;  
+}  
+  
+/* 2. 悬停时只改变边框颜色，不改变尺寸 */  
+.navbar .nav-link:hover,  
+.navbar .nav-item:hover .nav-link {  
+    border-bottom-color: #c9a84c !important;  /* 使用网站主题金色 */  
+    font-weight: normal !important;  
+}  
+  
+/* 3. 如果是当前活动页，也显示下边框 */  
+.navbar .nav-item.active .nav-link,  
+.navbar .nav-link.active {  
+    border-bottom-color: #c9a84c !important;  
+}  
+  
+/* 4. 固定导航项宽度，防止内容变化时伸缩 */  
+.navbar .nav-item {  
+    flex-shrink: 0 !important;  
+    text-align: center !important;  
+}  
+  
+/* 5. 如果导航栏本身有高度变化，固定其高度 */  
+.navbar {  
+    min-height: 60px !important;  /* 根据实际高度调整 */  
 }  
