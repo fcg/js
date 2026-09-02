@@ -7,6 +7,15 @@ body, .md-content, .md-typeset {
   -webkit-font-smoothing: antialiased;  
   color: #1e293b;  
   line-height: 1.8;  
+} 
+
+body .container,  
+body .wrapper,  
+body .site-inner {  
+    max-width: 100% !important;  
+    width: 100% !important;  
+    padding-left: 30px !important;  
+    padding-right: 30px !important;  
 }  
   
 /* ===== 2. 导航栏优化 ===== */  
@@ -29,7 +38,24 @@ body, .md-content, .md-typeset {
   
 .md-tabs__link:hover { opacity: 1; color: #60a5fa !important; }  
 .md-tabs__link--active { opacity: 1; color: #93c5fd !important; }  
-  
+
+header .container,  
+nav .container,  
+.site-header .wrap {  
+    max-width: 100% !important;  
+    padding-left: 30px !important;  
+    padding-right: 30px !important;  
+}  
+
+.nav-item,  
+.menu-item,  
+.nav-menu > li > a {  
+    border-bottom: 2px solid transparent !important;  
+    padding: 10px 15px !important;  
+    transition: border-color 0.3s ease, color 0.3s ease !important;  
+}  
+
+
 /* ===== 3. 标题优化 ===== */  
 .md-typeset h1 {  
   font-weight: 900 !important;  
