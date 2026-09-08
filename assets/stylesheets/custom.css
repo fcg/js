@@ -343,6 +343,96 @@
 .fc-qr img { border-radius: 8px; }
 .fc-qr p { margin: 0.8rem 0 0; font-size: 0.9rem; color: var(--fc-muted); }
 
+/* ---------- 移民评估页 ---------- */
+.fa-hero {
+  margin: 0.4rem 0 1.6rem;
+  padding: 2.4rem 2rem;
+  border-radius: 16px;
+  color: #ffffff;
+  text-align: center;
+  background: linear-gradient(120deg, var(--fc-primary-dark), var(--fc-primary) 60%, #2f6fd6);
+  box-shadow: 0 10px 30px rgba(18, 58, 143, 0.25);
+}
+.fa-hero h1 { margin: 0 0 0.8rem; font-size: 1.9rem; font-weight: 800; color: #ffffff; }
+.fa-hero p { margin: 0 auto; max-width: 720px; font-size: 0.95rem; line-height: 1.8; color: rgba(255,255,255,0.92); }
+
+.fa-form-card {
+  margin: 1rem 0 2rem;
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--fc-card-border);
+  border-radius: 14px;
+  background: var(--fc-card-bg);
+  box-shadow: 0 2px 10px rgba(20, 40, 90, 0.06);
+}
+.fa-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 20px;
+}
+.fa-field { display: flex; flex-direction: column; gap: 6px; }
+.fa-field > span { font-size: 0.86rem; font-weight: 700; color: var(--md-typeset-color); }
+.fa-field select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--fc-card-border);
+  border-radius: 8px;
+  background: var(--fc-card-bg);
+  color: var(--md-typeset-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.fa-field select:focus { outline: 2px solid var(--fc-primary-light); border-color: var(--fc-primary-light); }
+.fa-form-actions { margin-top: 1.4rem; text-align: center; }
+.fa-form-actions button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.fa-result { margin: 1rem 0 2rem; }
+.fa-result-title { font-size: 1.35rem; font-weight: 800; margin: 0 0 0.4rem; color: var(--md-typeset-color); }
+.fa-disclaimer { font-size: 0.82rem; line-height: 1.7; color: var(--fc-muted); margin: 0 0 1.2rem; }
+
+.fa-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.fa-card {
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--fc-card-border);
+  border-radius: 14px;
+  background: var(--fc-card-bg);
+  box-shadow: 0 2px 10px rgba(20, 40, 90, 0.06);
+}
+.fa-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 0.5rem; }
+.fa-card-head h3 { margin: 0; font-size: 1.05rem; font-weight: 800; color: var(--md-typeset-color); }
+.fa-level {
+  flex: none;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.fa-level-high { background: #e6f4ea; color: #1e7a46; }
+.fa-level-mid  { background: #fdf3e0; color: #b45309; }
+.fa-level-low   { background: #f0f2f6; color: #66748c; }
+[data-md-color-scheme="slate"] .fa-level-high { background: #1d3328; }
+[data-md-color-scheme="slate"] .fa-level-mid  { background: #3a2f1e; }
+[data-md-color-scheme="slate"] .fa-level-low   { background: #222c3d; }
+.fa-score { font-size: 1.5rem; font-weight: 800; color: var(--fc-primary); margin: 0 0 0.2rem; }
+[data-md-color-scheme="slate"] .fa-score { color: #8faeff; }
+.fa-score small { font-size: 0.8rem; font-weight: 500; color: var(--fc-muted); }
+.fa-note { font-size: 0.85rem; line-height: 1.7; color: var(--fc-muted); margin: 0.4rem 0 0.8rem; }
+.fa-card-link { font-size: 0.86rem; font-weight: 600; color: var(--fc-primary); text-decoration: none; }
+.fa-card-link:hover { text-decoration: underline; }
+.fa-cta-box { margin-top: 1.6rem; }
+
+@media (max-width: 900px) {
+  .fa-form-grid { grid-template-columns: repeat(2, 1fr); }
+  .fa-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .fa-form-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- 响应式 ---------- */
 @media (max-width: 900px) {
   .fc-grid-4 { grid-template-columns: repeat(2, 1fr); }
