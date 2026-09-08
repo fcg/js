@@ -209,16 +209,23 @@
 
     btn.disabled = true;
     btn.textContent = "提交中…";
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, 15000);
     fetch("https://formsubmit.co/ajax/" + EMAIL_TO, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
+      signal: ctrl.signal
     }).then(function (res) { return res.json(); })
       .then(function (data) {
+        clearTimeout(timer);
         if (data && data.success === "true") { showSuccess(); }
         else { fallbackMailto(payload); }
       })
-      .catch(function () { fallbackMailto(payload); });
+      .catch(function () {
+        clearTimeout(timer);
+        fallbackMailto(payload);
+      });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
