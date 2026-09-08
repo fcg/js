@@ -331,15 +331,17 @@
 .fc-contact-card a { font-weight: 600; }
 
 .fc-qr {
-  margin: 0.4rem 0 1.6rem;
-  padding: 1.2rem;
+  max-width: 480px;
+  margin: 0.4rem auto 1.6rem;
+  padding: 1.6rem;
   text-align: center;
-  border: 1px dashed var(--fc-card-border);
-  border-radius: 12px;
+  border: 1px solid var(--fc-card-border);
+  border-radius: 14px;
   background: var(--fc-card-bg);
+  box-shadow: 0 2px 10px rgba(20, 40, 90, 0.06);
 }
 .fc-qr img { border-radius: 8px; }
-.fc-qr p { margin: 0.6rem 0 0; font-size: 0.85rem; color: var(--fc-muted); }
+.fc-qr p { margin: 0.8rem 0 0; font-size: 0.9rem; color: var(--fc-muted); }
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 900px) {
