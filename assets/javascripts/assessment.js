@@ -190,7 +190,7 @@
       box.innerHTML =
         '<div class="fa-submit-ok">' +
           '<h3>提交成功</h3>' +
-          '<p>您的评估信息已直接发送至顾问邮箱（flbd02@flyabroad.com.cn），顾问将尽快与您联系。</p>' +
+          '<p>您的评估信息已直接发送给飞出国顾问，顾问将尽快与您联系。</p>' +
         "</div>";
     }
   }
