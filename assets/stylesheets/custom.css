@@ -449,6 +449,12 @@
 .fa-submit-box > p { margin: 0 0 0.9rem; font-size: 0.9rem; line-height: 1.7; color: var(--md-typeset-color); }
 .fa-submit-box .fa-note { margin: 0.9rem 0 0; font-size: 0.8rem; color: var(--fc-muted); }
 
+.fa-submit-ok { padding: 0.4rem 0; }
+.fa-submit-ok h3 { margin: 0 0 0.5rem; font-size: 1.2rem; font-weight: 800; color: #1a9c4b; }
+.fa-submit-ok p { margin: 0; font-size: 0.92rem; line-height: 1.7; color: var(--md-typeset-color); }
+
+.fa-submit-box .fc-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+
 @media (max-width: 900px) {
   .fa-form-grid { grid-template-columns: repeat(2, 1fr); }
   .fa-cards { grid-template-columns: 1fr; }

@@ -151,35 +151,82 @@
     $("fa-result").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function buildMailto() {
+  function collectPayload() {
     var occ = val("fa-occ").trim() || "未填写";
     var contact = val("fa-contact").trim() || "未填写";
+    return {
+      "年龄": AGE_TXT[val("fa-age")],
+      "最高学历": EDU_TXT[val("fa-edu")],
+      "职业": occ,
+      "工作经验": EXP_TXT[val("fa-exp")],
+      "语言成绩": LANG_TXT[val("fa-lang")],
+      "目标国家": PREF_TXT[val("fa-pref")],
+      "联系方式": contact,
+      "评估结果": lastSummary.length ? lastSummary.join("\n") : "（请先点击“开始评估”生成结果）"
+    };
+  }
+
+  function buildMailto(payload) {
     var subject = "移民评估咨询（网站提交）";
-    var body =
-      "飞出国官网移民评估（自动生成，请查收并回复）\n\n" +
-      "【基本信息】\n" +
-      "年龄：" + AGE_TXT[val("fa-age")] + "\n" +
-      "最高学历：" + EDU_TXT[val("fa-edu")] + "\n" +
-      "职业：" + occ + "\n" +
-      "工作经验：" + EXP_TXT[val("fa-exp")] + "\n" +
-      "语言成绩：" + LANG_TXT[val("fa-lang")] + "\n" +
-      "目标国家：" + PREF_TXT[val("fa-pref")] + "\n\n" +
-      "【自动评估结果（简化参考）】\n" +
-      (lastSummary.length ? lastSummary.join("\n") : "（尚未点击开始评估，请先点击开始评估生成结果）") + "\n\n" +
-      "【联系方式】\n" + contact + "\n";
+    var body = "飞出国官网移民评估（自动生成，请查收并回复）\n\n【基本信息】\n";
+    ["年龄", "最高学历", "职业", "工作经验", "语言成绩", "目标国家"].forEach(function (k) {
+      body += k + "：" + payload[k] + "\n";
+    });
+    body += "\n【自动评估结果（简化参考）】\n" + payload["评估结果"] + "\n\n【联系方式】\n" + payload["联系方式"] + "\n";
     return "mailto:" + EMAIL_TO +
       "?subject=" + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(body);
   }
 
+  function fallbackMailto(payload) {
+    window.location.href = buildMailto(payload);
+  }
+
+  function showSuccess() {
+    var box = $("fa-submit-box");
+    if (box) {
+      box.innerHTML =
+        '<div class="fa-submit-ok">' +
+          '<h3>提交成功</h3>' +
+          '<p>您的评估信息已直接发送至顾问邮箱（flbd02@flyabroad.com.cn），顾问将尽快与您联系。</p>' +
+        "</div>";
+    }
+  }
+
+  function handleSubmit() {
+    var btn = $("fa-mailto");
+    if (!btn) { return; }
+    var payload = collectPayload();
+    var formData = {
+      _subject: "移民评估咨询（网站提交）",
+      _template: "table",
+      _captcha: "false",
+      _honey: ""
+    };
+    Object.keys(payload).forEach(function (k) { formData[k] = payload[k]; });
+
+    btn.disabled = true;
+    btn.textContent = "提交中…";
+    fetch("https://formsubmit.co/ajax/" + EMAIL_TO, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(formData)
+    }).then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data && data.success === "true") { showSuccess(); }
+        else { fallbackMailto(payload); }
+      })
+      .catch(function () { fallbackMailto(payload); });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var btn = $("fa-run");
     if (btn) { btn.addEventListener("click", run); }
-    var mailBtn = $("fa-mailto");
-    if (mailBtn) {
-      mailBtn.addEventListener("click", function (e) {
+    var submitBtn = $("fa-mailto");
+    if (submitBtn) {
+      submitBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        window.location.href = buildMailto();
+        handleSubmit();
       });
     }
   });
