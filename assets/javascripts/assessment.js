@@ -148,6 +148,8 @@
     $("fa-cards").innerHTML = results.join("");
     lastSummary = summary;
     $("fa-result").removeAttribute("hidden");
+    var submitBox = $("fa-submit-box");
+    if (submitBox) { submitBox.removeAttribute("hidden"); }
     $("fa-result").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
