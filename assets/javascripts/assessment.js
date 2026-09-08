@@ -2,12 +2,23 @@
    移民资格在线评估（简化参考版）
    仅作方向性参考，不构成任何官方评估结论；
    最终以官方政策及飞出国顾问评估为准。
+   评估结果一键生成邮件发送至 flbd02@flyabroad.com.cn
    ========================================================== */
 (function () {
   "use strict";
 
+  var EMAIL_TO = "flbd02@flyabroad.com.cn";
+
+  var AGE_TXT = { "18": "18-24 岁", "29": "25-29 岁", "34": "30-34 岁", "39": "35-39 岁", "44": "40-44 岁", "45": "45 岁及以上" };
+  var EDU_TXT = { high: "高中及以下", college: "大专", bach: "本科", master: "硕士", phd: "博士" };
+  var LANG_TXT = { l6: "雅思 6.0 及以下", l65: "雅思 6.5（约 CLB8）", l7: "雅思 7.0（约 CLB9）", l8: "雅思 8.0 及以上" };
+  var EXP_TXT = { n: "少于 1 年", s3: "1-3 年", s5: "3-5 年", s8: "5-8 年", o8: "8 年以上" };
+  var PREF_TXT = { any: "不限（全部评估）", ca: "加拿大", au: "澳洲", nz: "新西兰", us: "美国" };
+
   function $(id) { return document.getElementById(id); }
   function val(id) { return $(id).value; }
+
+  var lastSummary = [];
 
   function levelTag(level, text) {
     return '<span class="fa-level fa-level-' + level + '">' + text + "</span>";
@@ -37,6 +48,7 @@
       pref: val("fa-pref")
     };
 
+    var summary = [];
     var results = [];
 
     /* ---------- 澳洲 189/190（EOI 打分简化版） ---------- */
@@ -61,6 +73,7 @@
       auNote,
       "../au/189/", "查看 189 详情"
     ));
+    summary.push("澳洲 189/190（" + auLevelText + "）：EOI 参考分 " + auTotal + "/65");
 
     /* ---------- 加拿大 EE（CRS 简化版） ---------- */
     var caAge = { "18": 90, "29": 100, "34": 95, "39": 80, "44": 50, "45": 0 }[a.age];
@@ -82,6 +95,7 @@
       caNote,
       "../ca/ee/", "查看 EE 详情"
     ));
+    summary.push("加拿大 EE（" + caLevelText + "）：CRS 参考分 " + caTotal + "/1200");
 
     /* ---------- 新西兰 SMC（6 分制简化） ---------- */
     var nzEdu = { high: 1, college: 2, bach: 3, master: 5, phd: 6 }[a.edu];
@@ -101,6 +115,7 @@
       nzNote,
       "../nz/smc/", "查看 SMC 详情"
     ));
+    summary.push("新西兰 SMC（" + nzLevelText + "）：6 分制参考 " + nzEdu + "/6");
 
     /* ---------- 美国 EB-1A / NIW（条件参考） ---------- */
     var usLevel, usLevelText, usNote;
@@ -120,6 +135,7 @@
       usNote,
       "../am/eb1a/", "查看 EB-1A 详情"
     ));
+    summary.push("美国 EB-1A/NIW（" + usLevelText + "）：条件评估");
 
     /* ---------- 按偏好排序 ---------- */
     var order = { ca: 0, au: 1, nz: 2, us: 3 };
@@ -130,12 +146,41 @@
     }
 
     $("fa-cards").innerHTML = results.join("");
+    lastSummary = summary;
     $("fa-result").removeAttribute("hidden");
     $("fa-result").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function buildMailto() {
+    var occ = val("fa-occ").trim() || "未填写";
+    var contact = val("fa-contact").trim() || "未填写";
+    var subject = "移民评估咨询（网站提交）";
+    var body =
+      "飞出国官网移民评估（自动生成，请查收并回复）\n\n" +
+      "【基本信息】\n" +
+      "年龄：" + AGE_TXT[val("fa-age")] + "\n" +
+      "最高学历：" + EDU_TXT[val("fa-edu")] + "\n" +
+      "职业：" + occ + "\n" +
+      "工作经验：" + EXP_TXT[val("fa-exp")] + "\n" +
+      "语言成绩：" + LANG_TXT[val("fa-lang")] + "\n" +
+      "目标国家：" + PREF_TXT[val("fa-pref")] + "\n\n" +
+      "【自动评估结果（简化参考）】\n" +
+      (lastSummary.length ? lastSummary.join("\n") : "（尚未点击开始评估，请先点击开始评估生成结果）") + "\n\n" +
+      "【联系方式】\n" + contact + "\n";
+    return "mailto:" + EMAIL_TO +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     var btn = $("fa-run");
     if (btn) { btn.addEventListener("click", run); }
+    var mailBtn = $("fa-mailto");
+    if (mailBtn) {
+      mailBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = buildMailto();
+      });
+    }
   });
 })();

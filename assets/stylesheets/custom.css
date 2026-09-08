@@ -381,7 +381,18 @@
   font-size: 0.9rem;
   cursor: pointer;
 }
-.fa-field select:focus { outline: 2px solid var(--fc-primary-light); border-color: var(--fc-primary-light); }
+.fa-field input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--fc-card-border);
+  border-radius: 8px;
+  background: var(--fc-card-bg);
+  color: var(--md-typeset-color);
+  font-size: 0.9rem;
+}
+.fa-field input::placeholder { color: var(--fc-muted); opacity: 0.75; }
+.fa-field select:focus, .fa-field input:focus { outline: 2px solid var(--fc-primary-light); border-color: var(--fc-primary-light); }
+.fa-field-wide { grid-column: 1 / -1; }
 .fa-form-actions { margin-top: 1.4rem; text-align: center; }
 .fa-form-actions button {
   border: none;
@@ -424,6 +435,19 @@
 .fa-card-link { font-size: 0.86rem; font-weight: 600; color: var(--fc-primary); text-decoration: none; }
 .fa-card-link:hover { text-decoration: underline; }
 .fa-cta-box { margin-top: 1.6rem; }
+
+.fa-submit-box {
+  margin-top: 1.4rem;
+  padding: 1.5rem 1.8rem;
+  border: 1px solid var(--fc-card-border);
+  border-radius: 14px;
+  background: var(--fc-card-bg);
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(20, 40, 90, 0.06);
+}
+.fa-submit-box h3 { margin: 0 0 0.5rem; font-size: 1.1rem; font-weight: 800; color: var(--md-typeset-color); }
+.fa-submit-box > p { margin: 0 0 0.9rem; font-size: 0.9rem; line-height: 1.7; color: var(--md-typeset-color); }
+.fa-submit-box .fa-note { margin: 0.9rem 0 0; font-size: 0.8rem; color: var(--fc-muted); }
 
 @media (max-width: 900px) {
   .fa-form-grid { grid-template-columns: repeat(2, 1fr); }

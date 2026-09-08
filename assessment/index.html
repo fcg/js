@@ -3078,13 +3078,8 @@
       </select>
     </label>
     <label class="fa-field">
-      <span>英语水平（雅思参考）</span>
-      <select id="fa-lang">
-        <option value="l6" selected>雅思 6.0 及以下</option>
-        <option value="l65">雅思 6.5（约 CLB8）</option>
-        <option value="l7">雅思 7.0（约 CLB9）</option>
-        <option value="l8">雅思 8.0 及以上</option>
-      </select>
+      <span>职业</span>
+      <input id="fa-occ" type="text" placeholder="如：软件工程师 / 护士 / 会计" />
     </label>
     <label class="fa-field">
       <span>技术类工作经验</span>
@@ -3097,6 +3092,15 @@
       </select>
     </label>
     <label class="fa-field">
+      <span>语言成绩（雅思参考）</span>
+      <select id="fa-lang">
+        <option value="l6" selected>雅思 6.0 及以下</option>
+        <option value="l65">雅思 6.5（约 CLB8）</option>
+        <option value="l7">雅思 7.0（约 CLB9）</option>
+        <option value="l8">雅思 8.0 及以上</option>
+      </select>
+    </label>
+    <label class="fa-field">
       <span>目标国家</span>
       <select id="fa-pref">
         <option value="any" selected>不限（全部评估）</option>
@@ -3106,7 +3110,10 @@
         <option value="us">美国</option>
       </select>
     </label>
-    <div class="fa-field"></div>
+    <label class="fa-field fa-field-wide">
+      <span>联系方式（微信 / 手机 / 邮箱，便于顾问与您联系）</span>
+      <input id="fa-contact" type="text" placeholder="如：微信号 flyabroad123 或 138xxxx8888" />
+    </label>
   </div>
   <div class="fa-form-actions">
     <button id="fa-run" class="fc-btn fc-btn-primary" type="button">开始评估</button>
@@ -3115,17 +3122,13 @@
 
 <div id="fa-result" class="fa-result" hidden>
   <h2 class="fa-result-title">评估结果</h2>
-  <p class="fa-disclaimer">以下结果由简化评分规则自动生成，仅帮助您快速了解各项目的大致方向，不构成任何评估结论或保证。移民申请还涉及职业清单、EOI/EE 抽签分数、州担保条件、资金与体检等多项要求，请以官方政策为准，并通过飞出国免费在线评估获取专业意见。</p>
+  <p class="fa-disclaimer">以下结果由简化评分规则自动生成，仅帮助您快速了解各项目的大致方向，不构成任何评估结论或保证。移民申请还涉及职业清单、EOI/EE 抽签分数、州担保条件、资金与体检等多项要求，请以官方政策为准，并通过邮件向飞出国顾问获取专业意见。</p>
   <div id="fa-cards" class="fa-cards"></div>
-  <div class="fc-cta fa-cta-box">
-    <div class="fc-cta-text">
-      <h3>想获得一对一的专业评估？</h3>
-      <p>填写免费在线评估表，飞出国将根据您的完整背景，为您评估最合适的移民类别，并以邮件回复您。</p>
-    </div>
-    <div class="fc-cta-actions">
-      <a class="fc-btn fc-btn-gold" href="http://pg.flyabroadvisa.com/" target="_blank" rel="noopener">免费在线评估</a>
-      <a class="fc-btn fc-btn-outline-light" href="mailto:contact@flyabroadvisa.com">邮件咨询</a>
-    </div>
+  <div class="fa-submit-box" id="fa-submit-box" hidden>
+    <h3>提交评估至顾问邮箱</h3>
+    <p>确认信息无误后，一键生成评估邮件（收件人：<b>flbd02@flyabroad.com.cn</b>），在您的邮件客户端中确认发送即可。</p>
+    <a id="fa-mailto" class="fc-btn fc-btn-primary" href="#">提交评估结果</a>
+    <p class="fa-note">如邮件客户端未能自动打开，请将页面信息直接发送至 flbd02@flyabroad.com.cn。</p>
   </div>
 </div>
 
