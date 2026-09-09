@@ -930,36 +930,33 @@
   color: #8fb0f0;
 }
 
-/* ---------- 隐藏左右侧边栏，内容全宽；下拉菜单溢出可见 ---------- */
-@media (min-width: 1024px) {
-  /* 让下拉菜单不被 tabs 容器裁剪 */
-  .md-tabs,
-  .md-tabs .md-grid,
-  .md-tabs__list {
-    overflow: visible !important;
-  }
-  /* 隐藏左右侧边栏 */
-  .md-sidebar--primary,
-  .md-sidebar--secondary {
-    display: none !important;
-  }
-  /* 内容区单列全宽 */
-  .md-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .md-content {
-    grid-column: 1 / -1;
-  }
-  /* 内容页正文限制阅读宽度并居中 */
-  .fc-page .md-typeset {
-    max-width: 880px;
-    margin: 0 auto;
-  }
+/* ---------- 隐藏左右侧边栏，内容全宽；下拉菜单溢出可见（全局生效） ---------- */
+/* 让下拉菜单不被 tabs 容器裁剪 */
+.md-tabs,
+.md-tabs .md-grid,
+.md-tabs__list {
+  overflow: visible !important;
+}
+/* 隐藏左右侧边栏 */
+.md-sidebar--primary,
+.md-sidebar--secondary {
+  display: none !important;
+}
+/* 内容区单列全宽 */
+.md-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+.md-content {
+  grid-column: 1 / -1 !important;
+}
+/* 内容页正文限制阅读宽度并居中 */
+.fc-page .md-typeset {
+  max-width: 880px;
+  margin: 0 auto;
 }
 
-/* 平板及以下：恢复 mkdocs-material 默认导航（抽屉/侧边栏），
-   下拉菜单在窄屏可能空间不足，禁用 */
-@media (max-width: 1023px) {
+/* 小屏手机：下拉菜单空间不足，禁用；mkdocs-material 抽屉导航仍可用 */
+@media (max-width: 599px) {
   .fc-dropdown { display: none !important; }
   .fc-dropdown-arrow { display: none; }
 }
