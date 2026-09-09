@@ -541,3 +541,281 @@
   .fc-qr { padding: 1.8rem 1.2rem; gap: 1.4rem; }
   .fc-qr-img img { max-width: 260px; }
 }
+
+/* ==========================================================
+   内容页全局美化（.fc-page 作用域，仅非首页）
+   简洁阅读排版 + 蓝红灰统一配色
+   ========================================================== */
+
+/* ---------- 正文基础排版 ---------- */
+.fc-page .md-typeset {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #1e293b;
+  letter-spacing: 0.01em;
+}
+[data-md-color-scheme="slate"] .fc-page .md-typeset {
+  color: #cbd5e1;
+}
+.fc-page .md-typeset p {
+  margin: 0.85em 0;
+}
+
+/* ---------- 标题层级 ---------- */
+.fc-page .md-typeset h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--fc-primary);
+  margin: 0.4em 0 0.9em;
+  padding-bottom: 0.45em;
+  border-bottom: 2px solid var(--fc-gray-border);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+.fc-page .md-typeset h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--fc-primary-dark);
+  margin: 2em 0 0.7em;
+  padding: 0.15em 0 0.15em 0.7em;
+  border-left: 4px solid var(--fc-red);
+  line-height: 1.45;
+}
+.fc-page .md-typeset h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--fc-primary);
+  margin: 1.6em 0 0.5em;
+  line-height: 1.4;
+}
+.fc-page .md-typeset h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #334155;
+  margin: 1.3em 0 0.4em;
+}
+[data-md-color-scheme="slate"] .fc-page .md-typeset h4 { color: #94a3b8; }
+
+/* ---------- 链接 ---------- */
+.fc-page .md-typeset a {
+  color: var(--fc-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  word-break: break-word;
+}
+.fc-page .md-typeset a:hover {
+  color: var(--fc-red);
+  border-bottom-color: var(--fc-red);
+}
+
+/* ---------- 粗体 / 强调 ---------- */
+.fc-page .md-typeset strong {
+  color: var(--fc-primary-dark);
+  font-weight: 700;
+}
+[data-md-color-scheme="slate"] .fc-page .md-typeset strong { color: #8fb0f0; }
+
+/* ---------- 列表 ---------- */
+.fc-page .md-typeset ul {
+  margin: 0.85em 0;
+  padding-left: 1.5em;
+}
+.fc-page .md-typeset ul li {
+  margin: 0.45em 0;
+  list-style: none;
+  position: relative;
+  padding-left: 0.2em;
+}
+.fc-page .md-typeset ul li::before {
+  content: "";
+  position: absolute;
+  left: -1.25em;
+  top: 0.68em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--fc-primary);
+}
+.fc-page .md-typeset ol {
+  margin: 0.85em 0;
+  padding-left: 1.7em;
+}
+.fc-page .md-typeset ol li {
+  margin: 0.45em 0;
+  padding-left: 0.2em;
+}
+.fc-page .md-typeset ol li::marker {
+  color: var(--fc-primary);
+  font-weight: 700;
+}
+
+/* ---------- 引用块 ---------- */
+.fc-page .md-typeset blockquote {
+  margin: 1.1em 0;
+  padding: 0.85em 1.2em;
+  border-left: 4px solid var(--fc-primary);
+  background: var(--fc-gray-bg);
+  border-radius: 0 10px 10px 0;
+  color: var(--fc-gray);
+}
+.fc-page .md-typeset blockquote p { margin: 0.3em 0; }
+[data-md-color-scheme="slate"] .fc-page .md-typeset blockquote {
+  background: #1b2433;
+  color: #9fb0c7;
+}
+
+/* ---------- 分割线 ---------- */
+.fc-page .md-typeset hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--fc-gray-border), transparent);
+  margin: 2.2em 0;
+}
+
+/* ---------- 表格 ---------- */
+.fc-page .md-typeset table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(18, 58, 143, 0.07);
+  margin: 1.3em 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.fc-page .md-typeset table th {
+  background: var(--fc-primary);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75em 1em;
+  text-align: left;
+  border: none;
+  white-space: nowrap;
+}
+.fc-page .md-typeset table td {
+  padding: 0.7em 1em;
+  border-bottom: 1px solid var(--fc-gray-border);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  vertical-align: top;
+}
+.fc-page .md-typeset table tbody tr:nth-child(even) {
+  background: var(--fc-gray-bg);
+}
+[data-md-color-scheme="slate"] .fc-page .md-typeset table tbody tr:nth-child(even) {
+  background: #1b2433;
+}
+.fc-page .md-typeset table tbody tr:hover {
+  background: #e8f0fe;
+}
+[data-md-color-scheme="slate"] .fc-page .md-typeset table tbody tr:hover {
+  background: #1f2c45;
+}
+
+/* ---------- 代码 ---------- */
+.fc-page .md-typeset code {
+  border-radius: 5px;
+  padding: 0.15em 0.45em;
+  font-size: 0.88em;
+  background: var(--fc-gray-bg);
+  color: var(--fc-primary-dark);
+}
+[data-md-color-scheme="slate"] .fc-page .md-typeset code {
+  background: #1b2433;
+  color: #8fb0f0;
+}
+.fc-page .md-typeset pre {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(18, 58, 143, 0.08);
+  border: 1px solid var(--fc-gray-border);
+}
+
+/* ---------- 图片 ---------- */
+.fc-page .md-typeset img {
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(18, 58, 143, 0.1);
+  margin: 0.8em 0;
+}
+
+/* ==========================================================
+   全局导航美化（侧边栏 / 顶部标签 / 面包屑，首页与内容页共用）
+   ========================================================== */
+
+/* ---------- 左侧导航 ---------- */
+.md-nav__item .md-nav__link {
+  border-radius: 6px;
+  margin: 1px 0;
+  transition: background 0.15s ease, color 0.15s ease;
+  font-size: 0.88rem;
+}
+.md-nav__item .md-nav__link:hover {
+  background: var(--fc-gray-bg);
+  color: var(--fc-primary);
+}
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link:hover {
+  background: #1f2c45;
+}
+.md-nav__item--active > .md-nav__link {
+  color: var(--fc-primary) !important;
+  font-weight: 700;
+  background: #e8f0fe;
+}
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  background: #1f2c45;
+  color: #8fb0f0 !important;
+}
+
+/* ---------- 右侧目录（当前阅读位置） ---------- */
+.md-nav--secondary .md-nav__link {
+  font-size: 0.82rem;
+  border-left: 3px solid transparent;
+  padding-left: 0.6em;
+  border-radius: 0 6px 6px 0;
+}
+.md-nav--secondary .md-nav__link--active {
+  color: var(--fc-red) !important;
+  font-weight: 600;
+  border-left-color: var(--fc-red);
+  background: rgba(220, 38, 38, 0.05);
+}
+
+/* ---------- 顶部标签导航 ---------- */
+.md-tabs {
+  background: linear-gradient(90deg, var(--fc-primary-dark), var(--fc-primary));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.md-tabs__link {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+.md-tabs__link:hover {
+  color: #ffffff;
+}
+.md-tabs__item--active .md-tabs__link {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ---------- 面包屑 ---------- */
+.md-breadcrumb {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+.md-breadcrumb a:hover {
+  color: var(--fc-red);
+}
+
+/* ---------- 内容页响应式 ---------- */
+@media (max-width: 768px) {
+  .fc-page .md-typeset { font-size: 0.9rem; line-height: 1.8; }
+  .fc-page .md-typeset h1 { font-size: 1.5rem; }
+  .fc-page .md-typeset h2 { font-size: 1.22rem; }
+  .fc-page .md-typeset h3 { font-size: 1.08rem; }
+  .fc-page .md-typeset table { font-size: 0.82rem; }
+  .fc-page .md-typeset table th,
+  .fc-page .md-typeset table td { padding: 0.55em 0.7em; }
+}
