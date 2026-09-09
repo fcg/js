@@ -827,6 +827,7 @@
 /* 标签项作为下拉定位容器 */
 .md-tabs__item {
   position: relative;
+  padding-bottom: 6px; /* 扩大 hover 区域，消除与下拉菜单的间隙 */
 }
 .fc-dropdown-arrow {
   display: inline-block;
@@ -845,6 +846,7 @@
   position: absolute;
   top: 100%;
   left: 0;
+  margin-top: -6px; /* 与 padding-bottom 配合，消除间隙 */
   min-width: 300px;
   max-width: 620px;
   max-height: 70vh;
@@ -855,7 +857,7 @@
   border: 1px solid var(--fc-gray-border);
   border-top: 3px solid var(--fc-red);
   padding: 14px 16px;
-  z-index: 1000;
+  z-index: 9999;
   animation: fcDropdownIn 0.18s ease-out;
 }
 @keyframes fcDropdownIn {
@@ -931,7 +933,8 @@
 }
 
 /* ---------- 隐藏左右侧边栏，内容全宽；下拉菜单溢出可见（全局生效） ---------- */
-/* 让下拉菜单不被 tabs 容器裁剪 */
+/* 让下拉菜单不被任何上层容器裁剪 */
+.md-header,
 .md-tabs,
 .md-tabs .md-grid,
 .md-tabs__list {
@@ -942,17 +945,22 @@
 .md-sidebar--secondary {
   display: none !important;
 }
-/* 内容区单列全宽 */
-.md-grid {
-  grid-template-columns: minmax(0, 1fr) !important;
+/* 内容容器全屏宽度（覆盖默认 max-width:61rem） */
+.md-grid,
+.md-main .md-grid {
+  max-width: none !important;
 }
+/* flex 布局下内容区占满剩余空间 */
 .md-content {
-  grid-column: 1 / -1 !important;
+  flex: 1 1 auto !important;
+  width: 100%;
+  min-width: 0;
 }
 /* 内容页正文限制阅读宽度并居中 */
 .fc-page .md-typeset {
   max-width: 880px;
   margin: 0 auto;
+  float: none;
 }
 
 /* 小屏手机：下拉菜单空间不足，禁用；mkdocs-material 抽屉导航仍可用 */
