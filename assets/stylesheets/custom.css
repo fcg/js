@@ -373,14 +373,14 @@
 }
 .fc-qr-img {
   flex: 0 0 auto;
-  padding: 0.9rem;
+  padding: 1rem;
   border: 1px solid var(--fc-card-border);
   border-radius: 14px;
   background: #ffffff;
   box-shadow: 0 4px 14px rgba(18, 58, 143, 0.10);
 }
-.fc-qr-img img { display: block; width: 230px; height: auto; border-radius: 8px; }
-.fc-qr-text { flex: 1 1 260px; min-width: 260px; text-align: center; }
+.fc-qr-img img { display: block; width: 280px; height: auto; border-radius: 8px; }
+.fc-qr-text { flex: 1 1 280px; min-width: 280px; text-align: center; }
 .fc-qr-text h3 { margin: 0 0 0.7rem; font-size: 1.35rem; font-weight: 800; color: var(--fc-primary); }
 .fc-qr-text p { margin: 0.35rem 0; font-size: 0.95rem; line-height: 1.7; color: var(--fc-muted); }
 .fc-qr-text .fc-qr-note { font-size: 0.85rem; color: var(--fc-red-dark); }
@@ -524,5 +524,5 @@
   .fc-hero-tagline { font-size: 1.05rem; letter-spacing: 0.18em; text-indent: 0.18em; }
   .fc-cta { padding: 1.6rem 1.4rem; }
   .fc-qr { padding: 1.8rem 1.2rem; gap: 1.4rem; }
-  .fc-qr-img img { width: 200px; }
+  .fc-qr-img img { width: 220px; }
 }
