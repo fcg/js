@@ -930,19 +930,30 @@
   color: #8fb0f0;
 }
 
-/* ---------- 隐藏左侧导航栏，调整内容区布局 ---------- */
+/* ---------- 隐藏左右侧边栏，内容全宽；下拉菜单溢出可见 ---------- */
 @media (min-width: 1024px) {
-  .md-sidebar--primary {
+  /* 让下拉菜单不被 tabs 容器裁剪 */
+  .md-tabs,
+  .md-tabs .md-grid,
+  .md-tabs__list {
+    overflow: visible !important;
+  }
+  /* 隐藏左右侧边栏 */
+  .md-sidebar--primary,
+  .md-sidebar--secondary {
     display: none !important;
   }
+  /* 内容区单列全宽 */
   .md-grid {
-    grid-template-columns: minmax(0, 1fr) 12rem;
+    grid-template-columns: minmax(0, 1fr);
   }
   .md-content {
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
   }
-  .md-sidebar--secondary {
-    grid-column: 2 / 3;
+  /* 内容页正文限制阅读宽度并居中 */
+  .fc-page .md-typeset {
+    max-width: 880px;
+    margin: 0 auto;
   }
 }
 
