@@ -343,7 +343,7 @@
 /* ---------- 联系卡片与二维码 ---------- */
 .fc-contact-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 14px;
   margin: 1rem 0 1.6rem;
 }
@@ -356,6 +356,18 @@
 .fc-contact-card h4 { margin: 0 0 0.4rem; font-size: 0.95rem; font-weight: 700; }
 .fc-contact-card p { margin: 0; font-size: 0.85rem; line-height: 1.7; color: var(--fc-muted); }
 .fc-contact-card a { font-weight: 600; }
+.fc-contact-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.fc-contact-img img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
 
 .fc-qr {
   display: flex;
