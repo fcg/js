@@ -62,7 +62,7 @@
     
     
   <link rel="icon" href="../../assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="../../assets/stylesheets/custom.css?v=20">
+  <link rel="stylesheet" href="../../assets/stylesheets/custom.css?v=21">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -209,7 +209,20 @@
     }
     function showDropdown(item) {
       var d = item.querySelector('.fc-dropdown');
-      if (d) d.style.setProperty('display', 'block', 'important');
+      if (d) {
+        d.style.setProperty('display', 'block', 'important');
+        d.style.setProperty('position', 'fixed', 'important');
+        d.style.setProperty('top', '100px', 'important');
+        d.style.setProperty('left', '50px', 'important');
+        d.style.setProperty('right', '50px', 'important');
+        d.style.setProperty('width', 'auto', 'important');
+        d.style.setProperty('min-width', '480px', 'important');
+        d.style.setProperty('min-height', '300px', 'important');
+        d.style.setProperty('z-index', '999999', 'important');
+        var rect = d.getBoundingClientRect();
+        console.log('[fc] SHOW dropdown, offsetH:', d.offsetHeight, 'rect:', JSON.stringify({top: rect.top, left: rect.left, w: rect.width, h: rect.height}));
+        console.log('[fc] dropdown innerHTML len:', d.innerHTML.length, 'firstChild:', d.firstChild ? d.firstChild.className : 'none');
+      }
       item.classList.add('fc-open');
     }
     function hideDropdown(item) {
