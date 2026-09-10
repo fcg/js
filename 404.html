@@ -56,7 +56,7 @@
     
     
   <link rel="icon" href="/assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="/assets/stylesheets/custom.css?v=13">
+  <link rel="stylesheet" href="/assets/stylesheets/custom.css?v=14">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -80,13 +80,13 @@
     .fc-dropdown-arrow { display: inline-block; margin-left: 5px; font-size: 0.65rem; opacity: 0.75; transition: transform 0.2s; }
     .md-tabs__item.fc-open .fc-dropdown-arrow { transform: rotate(180deg); }
 
-    /* ===== 下拉菜单（诊断版：醒目颜色确认显示） ===== */
-    .fc-dropdown { display: none; position: absolute; top: 100%; left: 0; margin-top: -8px;
-      min-width: 320px !important; max-width: 640px !important; min-height: 200px !important; max-height: none !important; height: auto !important; overflow: visible !important;
-      background: #fffbe6 !important; border-radius: 0 0 14px 14px;
+    /* ===== 下拉菜单（诊断版：fixed定位确认显示） ===== */
+    .fc-dropdown { display: none; position: fixed; top: 120px; left: 50px; right: 50px;
+      min-width: 320px !important; min-height: 300px !important; max-height: none !important; height: auto !important; overflow: visible !important;
+      background: #fffbe6 !important; border-radius: 14px;
       box-shadow: 0 14px 36px rgba(18,58,143,0.22);
-      border: 2px solid #dc2626 !important; border-top: 4px solid #dc2626 !important;
-      padding: 16px 18px !important; z-index: 9999 !important;
+      border: 4px solid #dc2626 !important;
+      padding: 20px !important; z-index: 999999 !important;
       outline: 3px solid #1b4db8; }
     .md-tabs__item:hover .fc-dropdown,
     .md-tabs__item:focus-within .fc-dropdown,
@@ -136,18 +136,19 @@
     }
     function fcForceShow(d) {
       d.style.setProperty('display','block','important');
-      d.style.setProperty('position','absolute','important');
-      d.style.setProperty('top','100%','important');
-      d.style.setProperty('left','0','important');
+      d.style.setProperty('position','fixed','important');
+      d.style.setProperty('top','120px','important');
+      d.style.setProperty('left','50px','important');
+      d.style.setProperty('right','50px','important');
       d.style.setProperty('min-width','320px','important');
-      d.style.setProperty('min-height','200px','important');
+      d.style.setProperty('min-height','300px','important');
       d.style.setProperty('height','auto','important');
       d.style.setProperty('max-height','none','important');
       d.style.setProperty('overflow','visible','important');
       d.style.setProperty('background','#fffbe6','important');
-      d.style.setProperty('border','2px solid #dc2626','important');
-      d.style.setProperty('padding','16px 18px','important');
-      d.style.setProperty('z-index','9999','important');
+      d.style.setProperty('border','4px solid #dc2626','important');
+      d.style.setProperty('padding','20px','important');
+      d.style.setProperty('z-index','999999','important');
       d.style.setProperty('opacity','1','important');
       d.style.setProperty('visibility','visible','important');
       d.style.setProperty('transform','none','important');
