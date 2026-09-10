@@ -22,6 +22,8 @@
   --md-primary-fg-color: var(--fc-primary);
   --md-primary-fg-color--light: var(--fc-primary-light);
   --md-primary-fg-color--dark: var(--fc-primary-dark);
+  --md-primary-bg-color: #1e293b;
+  --md-primary-bg-color--light: #334155;
   --md-accent-fg-color: var(--fc-red);
   --fc-card-bg: #ffffff;
   --fc-card-border: var(--fc-gray-border);
@@ -38,11 +40,35 @@
   --fc-muted: #9fb0c7;
 }
 
-/* 顶部导航栏：深蓝渐变 + 红色底线点缀 */
+/* 顶部导航栏：白色背景 + 红色底线，突出彩色 logo */
 .md-header {
-  background: linear-gradient(90deg, var(--fc-primary-dark), var(--fc-primary));
-  border-bottom: 2px solid rgba(220, 38, 38, 0.85);
-  box-shadow: 0 2px 12px rgba(18, 58, 143, 0.35);
+  background: #ffffff;
+  border-bottom: 2px solid var(--fc-red);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: #1e293b;
+}
+.md-header__title {
+  color: #1e293b;
+}
+.md-header__button {
+  color: #475569;
+}
+.md-header__button:hover {
+  color: var(--fc-primary);
+}
+/* 搜索框适配浅色背景 */
+.md-search__input {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+.md-search__input::placeholder {
+  color: #94a3b8;
+}
+.md-search__input:hover {
+  background-color: #e2e8f0;
+}
+.md-search__icon {
+  color: #64748b;
 }
 
 /* ---------- 首页 Hero（蓝色主视觉 + 红色光晕） ---------- */
