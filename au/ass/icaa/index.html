@@ -62,7 +62,7 @@
     
     
   <link rel="icon" href="../../../assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css?v=8">
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css?v=9">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -86,27 +86,28 @@
     .fc-dropdown-arrow { display: inline-block; margin-left: 5px; font-size: 0.65rem; opacity: 0.75; transition: transform 0.2s; }
     .md-tabs__item.fc-open .fc-dropdown-arrow { transform: rotate(180deg); }
 
-    /* ===== 下拉菜单 ===== */
+    /* ===== 下拉菜单（诊断版：醒目颜色确认显示） ===== */
     .fc-dropdown { display: none; position: absolute; top: 100%; left: 0; margin-top: -8px;
-      min-width: 320px; max-width: 640px; max-height: 75vh; overflow: visible;
-      background: #ffffff !important; border-radius: 0 0 14px 14px;
+      min-width: 320px; max-width: 640px; min-height: 200px; max-height: 75vh; overflow: visible;
+      background: #fffbe6 !important; border-radius: 0 0 14px 14px;
       box-shadow: 0 14px 36px rgba(18,58,143,0.22);
-      border: 1px solid #e3e8ef !important; border-top: 3px solid #dc2626 !important;
-      padding: 16px 18px !important; z-index: 9999 !important; }
+      border: 2px solid #dc2626 !important; border-top: 4px solid #dc2626 !important;
+      padding: 16px 18px !important; z-index: 9999 !important;
+      outline: 3px solid #1b4db8; }
     .md-tabs__item:hover .fc-dropdown,
     .md-tabs__item:focus-within .fc-dropdown,
     .md-tabs__item.fc-open .fc-dropdown { display: block !important; }
-    /* 用 flex 替代 grid，兼容性更好 */
     .fc-dropdown-grid { display: flex; flex-wrap: wrap; gap: 4px 12px; }
     .fc-dropdown-grid > .fc-dropdown-link { flex: 0 0 calc(50% - 6px); max-width: calc(50% - 6px); }
-    .fc-dropdown-link { display: block !important; visibility: visible !important;
+    .fc-dropdown-link { display: block !important; visibility: visible !important; opacity: 1 !important;
       padding: 8px 12px !important; border-radius: 7px;
-      font-size: 0.88rem !important; line-height: 1.4 !important;
-      color: #334155 !important; background: transparent !important;
+      font-size: 0.9rem !important; line-height: 1.4 !important; font-weight: normal !important;
+      color: #000000 !important; background: #ffffff !important;
       text-decoration: none !important; white-space: nowrap;
       overflow: hidden; text-overflow: ellipsis;
       width: auto !important; height: auto !important; margin: 0 !important;
-      float: none !important; position: static !important; }
+      float: none !important; position: static !important;
+      transform: none !important; clip: auto !important; }
     .fc-dropdown-link:hover { background: #e8f0fe !important; color: #1b4db8 !important; }
     .fc-dropdown-link--active { background: #e8f0fe !important; color: #1b4db8 !important; font-weight: 700 !important; }
     .fc-dropdown-group { flex: 0 0 100%; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e3e8ef; }
