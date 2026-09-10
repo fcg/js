@@ -62,7 +62,7 @@
     
     
   <link rel="icon" href="../../../assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css?v=9">
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css?v=10">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -119,19 +119,67 @@
   
   
   <script>
+    function fcForceShow(dropdown) {
+      dropdown.style.setProperty('display', 'block', 'important');
+      dropdown.style.setProperty('position', 'absolute', 'important');
+      dropdown.style.setProperty('top', '100%', 'important');
+      dropdown.style.setProperty('left', '0', 'important');
+      dropdown.style.setProperty('min-width', '320px', 'important');
+      dropdown.style.setProperty('min-height', '200px', 'important');
+      dropdown.style.setProperty('height', 'auto', 'important');
+      dropdown.style.setProperty('max-height', '75vh', 'important');
+      dropdown.style.setProperty('overflow', 'visible', 'important');
+      dropdown.style.setProperty('background', '#fffbe6', 'important');
+      dropdown.style.setProperty('border', '2px solid #dc2626', 'important');
+      dropdown.style.setProperty('padding', '16px 18px', 'important');
+      dropdown.style.setProperty('z-index', '9999', 'important');
+      dropdown.style.setProperty('opacity', '1', 'important');
+      dropdown.style.setProperty('visibility', 'visible', 'important');
+      dropdown.style.setProperty('transform', 'none', 'important');
+      dropdown.style.setProperty('clip', 'auto', 'important');
+      dropdown.style.setProperty('clip-path', 'none', 'important');
+    }
+    function fcForceHide(dropdown) {
+      dropdown.style.setProperty('display', 'none', 'important');
+    }
     document.addEventListener('click', function(e) {
       var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
       if (item) {
         var link = e.target.closest('.md-tabs__link');
         if (link) e.preventDefault();
+        var dropdown = item.querySelector('.fc-dropdown');
+        console.log('[fc diag] === 点击标签 ===');
+        console.log('[fc diag] dropdown element:', dropdown);
+        if (dropdown) {
+          var cs = getComputedStyle(dropdown);
+          console.log('[fc diag] computed display:', cs.display);
+          console.log('[fc diag] computed position:', cs.position);
+          console.log('[fc diag] computed height:', cs.height, 'min-height:', cs.minHeight);
+          console.log('[fc diag] computed padding:', cs.paddingTop, cs.paddingBottom);
+          console.log('[fc diag] computed overflow:', cs.overflow, cs.overflowX, cs.overflowY);
+          console.log('[fc diag] computed visibility:', cs.visibility, 'opacity:', cs.opacity);
+          console.log('[fc diag] children count:', dropdown.children.length);
+          console.log('[fc diag] innerHTML length:', dropdown.innerHTML.length);
+        }
         var wasOpen = item.classList.contains('fc-open');
-        document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { o.classList.remove('fc-open'); });
-        if (!wasOpen) item.classList.add('fc-open');
+        document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) {
+          o.classList.remove('fc-open');
+          var d = o.querySelector('.fc-dropdown');
+          if (d) fcForceHide(d);
+        });
+        if (!wasOpen) {
+          item.classList.add('fc-open');
+          if (dropdown) fcForceShow(dropdown);
+        }
       } else {
-        document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { o.classList.remove('fc-open'); });
+        document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) {
+          o.classList.remove('fc-open');
+          var d = o.querySelector('.fc-dropdown');
+          if (d) fcForceHide(d);
+        });
       }
     });
-    console.log('[fc] dropdown v7 loaded');
+    console.log('[fc] dropdown v10 loaded');
   </script>
 
   </head>
