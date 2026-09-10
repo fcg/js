@@ -869,24 +869,23 @@
   display: block;
 }
 
-/* 下拉菜单两列网格 */
+/* 下拉菜单网格容器 — 普通链接单列，分组独立成块 */
 .fc-dropdown-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3px 14px;
+  display: block;
+  width: 100%;
 }
 .fc-dropdown-link {
   display: block;
-  padding: 7px 10px;
-  border-radius: 7px;
-  font-size: 0.85rem;
+  width: 100%;
+  padding: 7px 12px;
+  border-radius: 6px;
+  font-size: 14px;
   line-height: 1.4;
   color: #334155;
   text-decoration: none;
   transition: background 0.15s ease, color 0.15s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  box-sizing: border-box;
 }
 .fc-dropdown-link:hover {
   background: #e8f0fe;
@@ -898,24 +897,44 @@
   font-weight: 700;
 }
 
-/* 三级分组（如"职业评估"） */
+/* 三级分组（如"职业评估"）— 浅灰背景+圆角，视觉独立成块 */
 .fc-dropdown-group {
-  grid-column: 1 / -1;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid var(--fc-gray-border);
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #eef2f7;
+  box-sizing: border-box;
 }
 .fc-dropdown-group-title {
-  font-size: 0.78rem;
+  display: block;
+  font-size: 14px;
   font-weight: 700;
   color: var(--fc-primary);
-  letter-spacing: 0.04em;
-  padding: 0 10px 6px;
+  padding: 0 0 8px 0;
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--fc-primary);
+  letter-spacing: 0.5px;
 }
 .fc-dropdown-group-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3px 14px;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 12px;
+  width: 100%;
+}
+/* 分组内链接 — 更紧凑 */
+.fc-dropdown-group .fc-dropdown-link {
+  padding: 5px 8px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #475569;
+  border-radius: 4px;
+}
+.fc-dropdown-group .fc-dropdown-link:hover {
+  background: #e8f0fe;
+  color: var(--fc-primary);
 }
 
 /* 暗色模式 */

@@ -60,7 +60,7 @@
     
     
   <link rel="icon" href="assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="assets/stylesheets/custom.css?v=24">
+  <link rel="stylesheet" href="assets/stylesheets/custom.css?v=25">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -164,10 +164,10 @@
         // 设置样式
         d.style.setProperty('display', 'none', 'important');
         d.style.setProperty('position', 'fixed', 'important');
-        d.style.setProperty('width', '480px', 'important');
-        d.style.setProperty('min-width', '480px', 'important');
+        d.style.setProperty('width', '600px', 'important');
+        d.style.setProperty('min-width', '600px', 'important');
         d.style.setProperty('min-height', '200px', 'important');
-        d.style.setProperty('max-height', '70vh', 'important');
+        d.style.setProperty('max-height', '75vh', 'important');
         d.style.setProperty('height', 'auto', 'important');
         d.style.setProperty('overflow-y', 'auto', 'important');
         d.style.setProperty('overflow-x', 'visible', 'important');
@@ -176,7 +176,7 @@
         d.style.setProperty('border-top', '3px solid #dc2626', 'important');
         d.style.setProperty('border-radius', '0 0 12px 12px', 'important');
         d.style.setProperty('box-shadow', '0 10px 30px rgba(27,77,184,0.15)', 'important');
-        d.style.setProperty('padding', '16px 18px', 'important');
+        d.style.setProperty('padding', '14px 16px', 'important');
         d.style.setProperty('z-index', '999999', 'important');
         d.style.setProperty('opacity', '1', 'important');
         d.style.setProperty('visibility', 'visible', 'important');
@@ -188,11 +188,11 @@
           grid.style.setProperty('width', '100%', 'important');
           grid.style.setProperty('font-size', '14px', 'important');
         }
-        // 链接
+        // 所有链接基础样式
         d.querySelectorAll('.fc-dropdown-link').forEach(function(a) {
           a.style.setProperty('display', 'block', 'important');
           a.style.setProperty('width', '100%', 'important');
-          a.style.setProperty('padding', '8px 12px', 'important');
+          a.style.setProperty('padding', '7px 12px', 'important');
           a.style.setProperty('font-size', '14px', 'important');
           a.style.setProperty('line-height', '1.4', 'important');
           a.style.setProperty('color', '#334155', 'important');
@@ -200,21 +200,44 @@
           a.style.setProperty('white-space', 'normal', 'important');
           a.style.setProperty('box-sizing', 'border-box', 'important');
           a.style.setProperty('border-radius', '6px', 'important');
+          a.style.setProperty('transition', 'background 0.15s, color 0.15s', 'important');
         });
-        // 分组
+        // 三级分组（如职业评估）— 浅灰背景+圆角
         d.querySelectorAll('.fc-dropdown-group').forEach(function(g) {
           g.style.setProperty('display', 'block', 'important');
           g.style.setProperty('width', '100%', 'important');
-          g.style.setProperty('margin-top', '10px', 'important');
-          g.style.setProperty('padding-top', '10px', 'important');
-          g.style.setProperty('border-top', '1px solid #e3e8ef', 'important');
+          g.style.setProperty('margin-top', '12px', 'important');
+          g.style.setProperty('padding', '12px 14px', 'important');
+          g.style.setProperty('background', '#f8fafc', 'important');
+          g.style.setProperty('border-radius', '8px', 'important');
+          g.style.setProperty('border', '1px solid #eef2f7', 'important');
+          g.style.setProperty('box-sizing', 'border-box', 'important');
         });
+        // 分组标题 — 蓝色加粗+下划线
         d.querySelectorAll('.fc-dropdown-group-title').forEach(function(t) {
           t.style.setProperty('display', 'block', 'important');
-          t.style.setProperty('font-size', '13px', 'important');
+          t.style.setProperty('font-size', '14px', 'important');
           t.style.setProperty('font-weight', '700', 'important');
           t.style.setProperty('color', '#1b4db8', 'important');
-          t.style.setProperty('padding', '0 12px 6px', 'important');
+          t.style.setProperty('padding', '0 0 8px 0', 'important');
+          t.style.setProperty('margin-bottom', '8px', 'important');
+          t.style.setProperty('border-bottom', '2px solid #1b4db8', 'important');
+          t.style.setProperty('letter-spacing', '0.5px', 'important');
+        });
+        // 分组内链接容器 — 两列网格
+        d.querySelectorAll('.fc-dropdown-group-links').forEach(function(gl) {
+          gl.style.setProperty('display', 'grid', 'important');
+          gl.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
+          gl.style.setProperty('gap', '2px 12px', 'important');
+          gl.style.setProperty('width', '100%', 'important');
+        });
+        // 分组内链接 — 更紧凑（覆盖基础样式）
+        d.querySelectorAll('.fc-dropdown-group .fc-dropdown-link').forEach(function(a) {
+          a.style.setProperty('padding', '5px 8px', 'important');
+          a.style.setProperty('font-size', '13px', 'important');
+          a.style.setProperty('line-height', '1.35', 'important');
+          a.style.setProperty('color', '#475569', 'important');
+          a.style.setProperty('border-radius', '4px', 'important');
         });
         // 绑定引用
         item._fcDropdown = d;
