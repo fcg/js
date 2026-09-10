@@ -62,7 +62,7 @@
     
     
   <link rel="icon" href="../../../assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css?v=19">
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.css?v=20">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -149,20 +149,112 @@
   
   
   <script>
-  document.addEventListener('click', function(e) {
-    var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
-    if (item) {
-      var link = e.target.closest('.md-tabs__link');
-      if (link && !e.target.closest('.fc-dropdown')) {
-        e.preventDefault();
-        var wasOpen = item.classList.contains('fc-open');
-        document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { o.classList.remove('fc-open'); });
-        if (!wasOpen) item.classList.add('fc-open');
-      }
-    } else {
-      document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { o.classList.remove('fc-open'); });
+  (function() {
+    function initDropdowns() {
+      var dropdowns = document.querySelectorAll('.fc-dropdown');
+      dropdowns.forEach(function(d) {
+        // 强制设置容器样式（内联 !important，最高优先级）
+        d.style.setProperty('display', 'none', 'important');
+        d.style.setProperty('position', 'absolute', 'important');
+        d.style.setProperty('top', '100%', 'important');
+        d.style.setProperty('left', '0', 'important');
+        d.style.setProperty('margin-top', '-8px', 'important');
+        d.style.setProperty('width', '480px', 'important');
+        d.style.setProperty('min-width', '480px', 'important');
+        d.style.setProperty('min-height', '200px', 'important');
+        d.style.setProperty('max-height', 'none', 'important');
+        d.style.setProperty('height', 'auto', 'important');
+        d.style.setProperty('overflow', 'visible', 'important');
+        d.style.setProperty('background', '#ffffff', 'important');
+        d.style.setProperty('border', '1px solid #e3e8ef', 'important');
+        d.style.setProperty('border-top', '3px solid #dc2626', 'important');
+        d.style.setProperty('border-radius', '0 0 12px 12px', 'important');
+        d.style.setProperty('box-shadow', '0 10px 30px rgba(27,77,184,0.15)', 'important');
+        d.style.setProperty('padding', '16px 18px', 'important');
+        d.style.setProperty('z-index', '9999', 'important');
+        d.style.setProperty('opacity', '1', 'important');
+        d.style.setProperty('visibility', 'visible', 'important');
+        // grid 容器
+        var grid = d.querySelector('.fc-dropdown-grid');
+        if (grid) {
+          grid.style.setProperty('display', 'block', 'important');
+          grid.style.setProperty('width', '100%', 'important');
+          grid.style.setProperty('min-height', '150px', 'important');
+          grid.style.setProperty('height', 'auto', 'important');
+          grid.style.setProperty('overflow', 'visible', 'important');
+          grid.style.setProperty('font-size', '14px', 'important');
+        }
+        // 链接
+        d.querySelectorAll('.fc-dropdown-link').forEach(function(a) {
+          a.style.setProperty('display', 'block', 'important');
+          a.style.setProperty('width', '100%', 'important');
+          a.style.setProperty('padding', '8px 12px', 'important');
+          a.style.setProperty('font-size', '14px', 'important');
+          a.style.setProperty('line-height', '1.4', 'important');
+          a.style.setProperty('color', '#334155', 'important');
+          a.style.setProperty('background', 'transparent', 'important');
+          a.style.setProperty('text-decoration', 'none', 'important');
+          a.style.setProperty('white-space', 'normal', 'important');
+          a.style.setProperty('overflow', 'visible', 'important');
+          a.style.setProperty('box-sizing', 'border-box', 'important');
+          a.style.setProperty('float', 'none', 'important');
+          a.style.setProperty('position', 'static', 'important');
+          a.style.setProperty('height', 'auto', 'important');
+          a.style.setProperty('min-height', '24px', 'important');
+          a.style.setProperty('opacity', '1', 'important');
+          a.style.setProperty('visibility', 'visible', 'important');
+        });
+      });
+      console.log('[fc] dropdowns initialized:', dropdowns.length);
     }
-  });
+    function showDropdown(item) {
+      var d = item.querySelector('.fc-dropdown');
+      if (d) d.style.setProperty('display', 'block', 'important');
+      item.classList.add('fc-open');
+    }
+    function hideDropdown(item) {
+      var d = item.querySelector('.fc-dropdown');
+      if (d) d.style.setProperty('display', 'none', 'important');
+      item.classList.remove('fc-open');
+    }
+    // hover 展开
+    document.addEventListener('mouseover', function(e) {
+      var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
+      if (item) showDropdown(item);
+    });
+    document.addEventListener('mouseout', function(e) {
+      var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
+      if (item && !item.contains(e.relatedTarget)) hideDropdown(item);
+    });
+    // 点击展开（触屏）
+    document.addEventListener('click', function(e) {
+      var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
+      if (item) {
+        var link = e.target.closest('.md-tabs__link');
+        if (link && !e.target.closest('.fc-dropdown')) {
+          e.preventDefault();
+          var wasOpen = item.classList.contains('fc-open');
+          document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { hideDropdown(o); });
+          if (!wasOpen) showDropdown(item);
+        }
+      } else {
+        document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { hideDropdown(o); });
+      }
+    });
+    // 初始化
+    if (document.readyState !== 'loading') initDropdowns();
+    else document.addEventListener('DOMContentLoaded', initDropdowns);
+    window.addEventListener('load', initDropdowns);
+    // 自动展开第一个测试
+    setTimeout(function() {
+      var first = document.querySelector('.md-tabs__item.fc-has-dropdown');
+      if (first) {
+        console.log('[fc] auto show first dropdown');
+        showDropdown(first);
+        setTimeout(function() { hideDropdown(first); }, 8000);
+      }
+    }, 1500);
+  })();
   </script>
 
   </head>
