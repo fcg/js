@@ -62,7 +62,7 @@
     
     
   <link rel="icon" href="../assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="../assets/stylesheets/custom.css?v=14">
+  <link rel="stylesheet" href="../assets/stylesheets/custom.css?v=15">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -130,8 +130,19 @@
       console.log('[fc diag] overflow:', cs.overflow, cs.overflowX, cs.overflowY);
       console.log('[fc diag] vis:', cs.visibility, '| op:', cs.opacity, '| transform:', cs.transform);
       console.log('[fc diag] children:', dropdown.children.length, '| htmlLen:', dropdown.innerHTML.length);
+      console.log('[fc diag] innerHTML:', dropdown.innerHTML.substring(0, 200));
+      var grid = dropdown.querySelector('.fc-dropdown-grid');
+      if (grid) {
+        var gcs = getComputedStyle(grid);
+        console.log('[fc diag] GRID display:', gcs.display, '| h:', gcs.height, '| minH:', gcs.minHeight, '| overflow:', gcs.overflowX, gcs.overflowY);
+        console.log('[fc diag] GRID children:', grid.children.length, '| cols:', gcs.gridTemplateColumns);
+        if (grid.children.length > 0) {
+          var fc = grid.children[0], fcs = getComputedStyle(fc);
+          console.log('[fc diag] GRID child0:', fc.tagName + '.' + (fc.className||'').substring(0,30), '| display:', fcs.display, '| h:', fcs.height, '| vis:', fcs.visibility, '| op:', fcs.opacity, '| pos:', fcs.position);
+        }
+      } else { console.log('[fc diag] GRID NOT FOUND'); }
       var fl = dropdown.querySelector('.fc-dropdown-link');
-      if (fl) { var lcs = getComputedStyle(fl); console.log('[fc diag] link display:', lcs.display, 'vis:', lcs.visibility, 'color:', lcs.color, 'fs:', lcs.fontSize); }
+      if (fl) { var lcs = getComputedStyle(fl); console.log('[fc diag] link display:', lcs.display, 'vis:', lcs.visibility, 'color:', lcs.color, 'fs:', lcs.fontSize, '| pos:', lcs.position, '| float:', lcs.cssFloat); console.log('[fc diag] link text:', fl.textContent.substring(0, 40)); }
       var el = dropdown.parentElement, chain = [];
       while (el && chain.length < 8) {
         var pcs = getComputedStyle(el);
