@@ -62,7 +62,7 @@
     
     
   <link rel="icon" href="../assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="../assets/stylesheets/custom.css?v=22">
+  <link rel="stylesheet" href="../assets/stylesheets/custom.css?v=23">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -150,38 +150,40 @@
   
   <script>
   (function() {
+    var dropdowns = [];
     function initDropdowns() {
-      var dropdowns = document.querySelectorAll('.fc-dropdown');
-      dropdowns.forEach(function(d) {
-        // 强制设置容器样式（内联 !important，最高优先级）
+      if (dropdowns.length > 0) return;
+      var items = document.querySelectorAll('.md-tabs__item.fc-has-dropdown');
+      items.forEach(function(item, idx) {
+        var d = item.querySelector('.fc-dropdown');
+        if (!d) return;
+        // 移到body，脱离.md-tabs
+        document.body.appendChild(d);
+        // 设置样式
         d.style.setProperty('display', 'none', 'important');
-        d.style.setProperty('position', 'absolute', 'important');
-        d.style.setProperty('top', '100%', 'important');
-        d.style.setProperty('left', '0', 'important');
-        d.style.setProperty('margin-top', '-8px', 'important');
+        d.style.setProperty('position', 'fixed', 'important');
         d.style.setProperty('width', '480px', 'important');
         d.style.setProperty('min-width', '480px', 'important');
         d.style.setProperty('min-height', '200px', 'important');
-        d.style.setProperty('max-height', 'none', 'important');
+        d.style.setProperty('max-height', '70vh', 'important');
         d.style.setProperty('height', 'auto', 'important');
-        d.style.setProperty('overflow', 'visible', 'important');
+        d.style.setProperty('overflow-y', 'auto', 'important');
+        d.style.setProperty('overflow-x', 'visible', 'important');
         d.style.setProperty('background', '#ffffff', 'important');
         d.style.setProperty('border', '1px solid #e3e8ef', 'important');
         d.style.setProperty('border-top', '3px solid #dc2626', 'important');
         d.style.setProperty('border-radius', '0 0 12px 12px', 'important');
         d.style.setProperty('box-shadow', '0 10px 30px rgba(27,77,184,0.15)', 'important');
         d.style.setProperty('padding', '16px 18px', 'important');
-        d.style.setProperty('z-index', '9999', 'important');
+        d.style.setProperty('z-index', '999999', 'important');
         d.style.setProperty('opacity', '1', 'important');
         d.style.setProperty('visibility', 'visible', 'important');
-        // grid 容器
+        d.style.setProperty('box-sizing', 'border-box', 'important');
+        // grid容器
         var grid = d.querySelector('.fc-dropdown-grid');
         if (grid) {
           grid.style.setProperty('display', 'block', 'important');
           grid.style.setProperty('width', '100%', 'important');
-          grid.style.setProperty('min-height', '150px', 'important');
-          grid.style.setProperty('height', 'auto', 'important');
-          grid.style.setProperty('overflow', 'visible', 'important');
           grid.style.setProperty('font-size', '14px', 'important');
         }
         // 链接
@@ -192,100 +194,104 @@
           a.style.setProperty('font-size', '14px', 'important');
           a.style.setProperty('line-height', '1.4', 'important');
           a.style.setProperty('color', '#334155', 'important');
-          a.style.setProperty('background', 'transparent', 'important');
           a.style.setProperty('text-decoration', 'none', 'important');
           a.style.setProperty('white-space', 'normal', 'important');
-          a.style.setProperty('overflow', 'visible', 'important');
           a.style.setProperty('box-sizing', 'border-box', 'important');
-          a.style.setProperty('float', 'none', 'important');
-          a.style.setProperty('position', 'static', 'important');
-          a.style.setProperty('height', 'auto', 'important');
-          a.style.setProperty('min-height', '24px', 'important');
-          a.style.setProperty('opacity', '1', 'important');
-          a.style.setProperty('visibility', 'visible', 'important');
+          a.style.setProperty('border-radius', '6px', 'important');
         });
+        // 分组
+        d.querySelectorAll('.fc-dropdown-group').forEach(function(g) {
+          g.style.setProperty('display', 'block', 'important');
+          g.style.setProperty('width', '100%', 'important');
+          g.style.setProperty('margin-top', '10px', 'important');
+          g.style.setProperty('padding-top', '10px', 'important');
+          g.style.setProperty('border-top', '1px solid #e3e8ef', 'important');
+        });
+        d.querySelectorAll('.fc-dropdown-group-title').forEach(function(t) {
+          t.style.setProperty('display', 'block', 'important');
+          t.style.setProperty('font-size', '13px', 'important');
+          t.style.setProperty('font-weight', '700', 'important');
+          t.style.setProperty('color', '#1b4db8', 'important');
+          t.style.setProperty('padding', '0 12px 6px', 'important');
+        });
+        // 绑定引用
+        item._fcDropdown = d;
+        dropdowns.push({item: item, dropdown: d});
       });
-      console.log('[fc] dropdowns initialized:', dropdowns.length);
+      console.log('[fc] dropdowns moved to body:', dropdowns.length);
     }
     function showDropdown(item) {
-      var d = item.querySelector('.fc-dropdown');
-      if (d) {
-        d.style.setProperty('display', 'block', 'important');
-        d.style.setProperty('position', 'fixed', 'important');
-        d.style.setProperty('top', '100px', 'important');
-        d.style.setProperty('left', '50px', 'important');
-        d.style.setProperty('right', '50px', 'important');
-        d.style.setProperty('width', 'auto', 'important');
-        d.style.setProperty('min-width', '480px', 'important');
-        d.style.setProperty('min-height', '300px', 'important');
-        d.style.setProperty('height', 'auto', 'important');
-        d.style.setProperty('max-height', 'none', 'important');
-        d.style.setProperty('overflow', 'visible', 'important');
-        d.style.setProperty('z-index', '999999', 'important');
-        d.style.setProperty('opacity', '1', 'important');
-        d.style.setProperty('visibility', 'visible', 'important');
-        // 强制重排
-        void d.offsetHeight;
-        var cs = getComputedStyle(d);
-        var rect = d.getBoundingClientRect();
-        console.log('[fc] SHOW diag:');
-        console.log('[fc]   inline display:', d.style.display, '| computed display:', cs.display);
-        console.log('[fc]   inline pos:', d.style.position, '| computed pos:', cs.position);
-        console.log('[fc]   offsetH:', d.offsetHeight, '| clientH:', d.clientHeight, '| scrollH:', d.scrollHeight);
-        console.log('[fc]   rect:', JSON.stringify({top: rect.top, left: rect.left, w: rect.width, h: rect.height}));
-        console.log('[fc]   inDOM:', document.body.contains(d));
-        // 父链诊断
-        var p = d.parentElement, chain = [];
-        while (p && chain.length < 6) {
-          var pcs = getComputedStyle(p);
-          chain.push(p.tagName + '.' + (p.className||'').toString().substring(0,30) + ' disp=' + pcs.display + ' offsetH=' + p.offsetHeight + ' vis=' + pcs.visibility + ' op=' + pcs.opacity);
-          p = p.parentElement;
-        }
-        console.log('[fc]   parent chain:', chain.join(' < '));
-        console.log('[fc]   innerHTML len:', d.innerHTML.length, '| children:', d.children.length);
-      }
+      var d = item._fcDropdown;
+      if (!d) return;
+      var rect = item.getBoundingClientRect();
+      d.style.setProperty('top', (rect.bottom + window.scrollY - 8) + 'px', 'important');
+      d.style.setProperty('left', (rect.left + window.scrollX) + 'px', 'important');
+      d.style.setProperty('display', 'block', 'important');
       item.classList.add('fc-open');
+      console.log('[fc] show dropdown, top:', rect.bottom, 'left:', rect.left, 'offsetH:', d.offsetHeight);
     }
     function hideDropdown(item) {
-      var d = item.querySelector('.fc-dropdown');
+      var d = item._fcDropdown;
       if (d) d.style.setProperty('display', 'none', 'important');
       item.classList.remove('fc-open');
     }
-    // hover 展开
+    function hideAll() {
+      dropdowns.forEach(function(o) { hideDropdown(o.item); });
+    }
+    // hover事件
     document.addEventListener('mouseover', function(e) {
       var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
-      if (item) showDropdown(item);
+      if (item && item._fcDropdown) {
+        hideAll();
+        showDropdown(item);
+      }
     });
     document.addEventListener('mouseout', function(e) {
       var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
-      if (item && !item.contains(e.relatedTarget)) hideDropdown(item);
+      if (item && item._fcDropdown) {
+        var related = e.relatedTarget;
+        if (!item.contains(related) && !item._fcDropdown.contains(related)) {
+          hideDropdown(item);
+        }
+      }
+    });
+    // 下拉菜单本身hover时保持显示
+    document.addEventListener('mouseover', function(e) {
+      var d = e.target.closest('.fc-dropdown');
+      if (d) {
+        dropdowns.forEach(function(o) {
+          if (o.dropdown === d) o.item.classList.add('fc-open');
+        });
+      }
     });
     // 点击展开（触屏）
     document.addEventListener('click', function(e) {
       var item = e.target.closest('.md-tabs__item.fc-has-dropdown');
-      if (item) {
+      if (item && item._fcDropdown) {
         var link = e.target.closest('.md-tabs__link');
         if (link && !e.target.closest('.fc-dropdown')) {
           e.preventDefault();
           var wasOpen = item.classList.contains('fc-open');
-          document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { hideDropdown(o); });
+          hideAll();
           if (!wasOpen) showDropdown(item);
         }
-      } else {
-        document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { hideDropdown(o); });
+      } else if (!e.target.closest('.fc-dropdown')) {
+        hideAll();
       }
     });
     // 初始化
     if (document.readyState !== 'loading') initDropdowns();
     else document.addEventListener('DOMContentLoaded', initDropdowns);
     window.addEventListener('load', initDropdowns);
-    // 自动展开第一个测试
+    // 自动展开测试
     setTimeout(function() {
+      initDropdowns();
       var first = document.querySelector('.md-tabs__item.fc-has-dropdown');
-      if (first) {
+      if (first && first._fcDropdown) {
         console.log('[fc] auto show first dropdown');
+        hideAll();
         showDropdown(first);
-        setTimeout(function() { hideDropdown(first); }, 8000);
+        setTimeout(function() { hideDropdown(first); }, 10000);
       }
     }, 1500);
   })();
