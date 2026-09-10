@@ -56,31 +56,39 @@
     
     
   <link rel="icon" href="/assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="/assets/stylesheets/custom.css?v=5">
+  <link rel="stylesheet" href="/assets/stylesheets/custom.css?v=6">
   
   <style>
-    /* 隐藏左右侧边栏 */
+    /* ===== 隐藏左右侧边栏 ===== */
     .md-sidebar--primary, .md-sidebar--secondary { display: none !important; }
-    /* 内容容器全屏宽度 */
+
+    /* ===== 内容区全屏+居中 ===== */
+    .md-container { overflow: visible !important; }
     .md-grid, .md-main .md-grid, .md-main__inner { max-width: none !important; }
-    /* flex 布局下内容区占满 */
-    .md-content { flex: 1 1 auto !important; width: 100%; min-width: 0; }
-    /* 内容页正文居中 */
-    .fc-page .md-typeset { max-width: 880px; margin: 0 auto; float: none; }
-    /* 下拉菜单不被裁剪 */
-    .md-header, .md-tabs, .md-tabs .md-grid, .md-tabs__list { overflow: visible !important; }
-    /* 标签项定位 */
-    .md-tabs__item { position: relative; padding-bottom: 6px; }
-    /* 下拉菜单默认隐藏 */
-    .fc-dropdown { display: none; position: absolute; top: 100%; left: 0; margin-top: -6px;
+    .md-content { flex: 1 1 auto !important; width: 100%; min-width: 0; margin: 0 !important; }
+    /* 正文限制阅读宽度并居中 */
+    .fc-page .md-content__inner,
+    .fc-page .md-typeset { max-width: 880px; margin: 0 auto !important; float: none; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+    /* ===== 下拉菜单不被任何容器裁剪 ===== */
+    .md-container, .md-header, .md-tabs, .md-tabs .md-grid, .md-tabs__list { overflow: visible !important; }
+
+    /* ===== 标签项定位 ===== */
+    .md-tabs__item { position: relative; padding-bottom: 8px; }
+    .fc-dropdown-arrow { display: inline-block; margin-left: 5px; font-size: 0.65rem; opacity: 0.75; transition: transform 0.2s; }
+    .md-tabs__item.fc-open .fc-dropdown-arrow { transform: rotate(180deg); }
+
+    /* ===== 下拉菜单 ===== */
+    .fc-dropdown { display: none; position: absolute; top: 100%; left: 0; margin-top: -8px;
       min-width: 300px; max-width: 620px; max-height: 70vh; overflow-y: auto;
       background: #fff; border-radius: 0 0 14px 14px;
       box-shadow: 0 14px 36px rgba(18,58,143,0.22);
       border: 1px solid #e3e8ef; border-top: 3px solid #dc2626;
       padding: 14px 16px; z-index: 9999; }
-    /* hover 展开 */
+    /* hover 或 JS 点击展开 */
     .md-tabs__item:hover .fc-dropdown,
-    .md-tabs__item:focus-within .fc-dropdown { display: block; }
+    .md-tabs__item:focus-within .fc-dropdown,
+    .md-tabs__item.fc-open .fc-dropdown { display: block; }
     .fc-dropdown-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px 14px; }
     .fc-dropdown-link { display: block; padding: 7px 10px; border-radius: 7px;
       font-size: 0.85rem; color: #334155; text-decoration: none;
@@ -90,10 +98,33 @@
     .fc-dropdown-group { grid-column: 1/-1; margin-top: 10px; padding-top: 10px; border-top: 1px solid #e3e8ef; }
     .fc-dropdown-group-title { font-size: 0.78rem; font-weight: 700; color: #1b4db8; padding: 0 10px 6px; }
     .fc-dropdown-group-links { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px 14px; }
-    .fc-dropdown-arrow { display: inline-block; margin-left: 5px; font-size: 0.65rem; opacity: 0.75; }
     @media (max-width: 599px) { .fc-dropdown, .fc-dropdown-arrow { display: none !important; } }
   </style>
   
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var items = document.querySelectorAll('.md-tabs__item.fc-has-dropdown');
+      items.forEach(function(item) {
+        var link = item.querySelector('.md-tabs__link');
+        if (!link) return;
+        link.addEventListener('click', function(e) {
+          // 点击标签时切换下拉菜单，不跳转
+          e.preventDefault();
+          var wasOpen = item.classList.contains('fc-open');
+          // 关闭所有其他下拉
+          document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { o.classList.remove('fc-open'); });
+          if (!wasOpen) item.classList.add('fc-open');
+        });
+      });
+      // 点击其他地方关闭
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.md-tabs__item.fc-has-dropdown')) {
+          document.querySelectorAll('.md-tabs__item.fc-open').forEach(function(o) { o.classList.remove('fc-open'); });
+        }
+      });
+    });
+  </script>
 
   </head>
   
