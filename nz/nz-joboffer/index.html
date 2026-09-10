@@ -62,7 +62,7 @@
     
     
   <link rel="icon" href="../../assets/images/favicon.png?v=2">
-  <link rel="stylesheet" href="../../assets/stylesheets/custom.css?v=23">
+  <link rel="stylesheet" href="../../assets/stylesheets/custom.css?v=24">
   
   <style>
     /* ===== 隐藏左右侧边栏 ===== */
@@ -283,17 +283,6 @@
     if (document.readyState !== 'loading') initDropdowns();
     else document.addEventListener('DOMContentLoaded', initDropdowns);
     window.addEventListener('load', initDropdowns);
-    // 自动展开测试
-    setTimeout(function() {
-      initDropdowns();
-      var first = document.querySelector('.md-tabs__item.fc-has-dropdown');
-      if (first && first._fcDropdown) {
-        console.log('[fc] auto show first dropdown');
-        hideAll();
-        showDropdown(first);
-        setTimeout(function() { hideDropdown(first); }, 10000);
-      }
-    }, 1500);
   })();
   </script>
 
