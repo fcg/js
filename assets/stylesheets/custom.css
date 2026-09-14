@@ -1026,3 +1026,10 @@
   display: flex !important;
   align-items: center !important;
 }
+
+/* ---------- 评估页 hero 标题白字（覆盖全局 h1 蓝色，修复蓝底蓝字） ---------- */
+.fc-page .md-typeset .fa-hero h1 {
+  color: #ffffff;
+  border-bottom: none;
+  padding-bottom: 0;
+}
