@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://js.flyabroad.com.hk/</loc>
-         <lastmod>2026-09-15</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://js.flyabroad.com.hk/am/</loc>
@@ -1873,15 +1873,11 @@
          <lastmod>2026-09-11</lastmod>
     </url>
     <url>
-         <loc>https://js.flyabroad.com.hk/ca/ns/jing-yan-lei-yi-min-xiang-mu.html</loc>
-         <lastmod>2026-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-guan-jian-jian-zhu-gong-ren-shi-dian-xiang-mu.html</loc>
-         <lastmod>2026-09-11</lastmod>
-    </url>
-    <url>
          <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-ji-shu-gong-ren-lei-bie.html</loc>
+         <lastmod>2026-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-jian-zhu-hang-ye-lei-bie.html</loc>
          <lastmod>2026-09-11</lastmod>
     </url>
     <url>
@@ -1889,11 +1885,15 @@
          <lastmod>2026-09-11</lastmod>
     </url>
     <url>
-         <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-lao-dong-li-shi-chang-you-xian-lei-bie.html</loc>
+         <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-jing-yan-lei-bie-kuai-su-tong-dao.html</loc>
          <lastmod>2026-09-11</lastmod>
     </url>
     <url>
-         <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-liu-xue-sheng-jin-que-zhi-ye-lei-bie.html</loc>
+         <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-xin-sheng-bi-ye-sheng-lei-bie.html</loc>
+         <lastmod>2026-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://js.flyabroad.com.hk/ca/ns/nsnp-yi-sheng-lei-bie.html</loc>
          <lastmod>2026-09-11</lastmod>
     </url>
     <url>
